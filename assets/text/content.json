@@ -10,9 +10,9 @@
       "bookTable": "bordbestilling"
     },
     "hero": {
-      "title": "[Meny]",
-      "subtitle": "[Undertekst med beskrivelse av kaféen]",
-      "cta": "[kanpp for meny]"
+      "title": "[Velkommen til Caffe Aroma]",
+      "subtitle": "[Din lokale kafé for kvalitetskaffe og ferske bakevarer]",
+      "cta": "kanpp for meny"
     },
     "categories": [
       {
@@ -34,32 +34,32 @@
   
     
     "menu": {
-      "title": "[mest populære retter]",
-      "subtitle": "[her kan du finne våre mest populære retter]",
+      "title": "[mest populære produkter]",
+      "subtitle": "[her kan du finne våre mest populære produkter]",
       "categories": {
         "coffee": {
-          "title": "[kaffe]",
+          "title": "[Frokost]",
           "items": [
-            { "name": "[Espresso]", "price": "[49.90kr]" },
-            { "name": "[Islate]", "price": "[59.90kr]" },
-            { "name": "[Cappuccino]", "price": "[49.90kr]" },
-            { "name": "[Americano]", "price": "[59.90kr]" }
+            { "name": "[Surdeigsrundstykke Ost & Kalkunskinke]", "price": "[79.90kr]" },
+            { "name": "[Surdeigsrundstykke Tomat & Avokado]", "price": "[79.90kr]" },
+            { "name": "[Yoghurt Jordbær]", "price": "[39.90kr]" },
+            { "name": "[Yoghurt Agave]", "price": "[39.90kr]" }
           ]
         },
         "bakery": {
-          "title": "[bakst]",
+          "title": "[bakst/deserter]",
           "items": [
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" }
+            { "name": "[sjokoladebolle Kokos]", "price": "[39.90kr]" },
+            { "name": "[Focaccia Salami & Brie]", "price": "[89.90kr]" },
+            { "name": "[Triple Chocolade Crumb]", "price": "[49.90kr]" },
+            { "name": "[Tiramisu]", "price": "[49.90kr]" }
           ]
         },
         "lunch": {
           "title": "[lunsj]",
           "items": [
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Toast Egg & Bacon]", "price": "[Pris]" },
+            { "name": "[Surdeigsrundstykke Ost & Kalkunskinke]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" }
           ]
