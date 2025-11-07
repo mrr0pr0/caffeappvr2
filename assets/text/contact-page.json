@@ -10,7 +10,7 @@
       "bookTable": "bordbestilling"
     },
     "hero": {
-      "title": "[Hovedoverskrift med velkommen]",
+      "title": "[ med velkommen]",
       "subtitle": "[Undertekst som beskriver kaféopplevelsen]",
       "cta": "[Handlingsknapp]"
     },
