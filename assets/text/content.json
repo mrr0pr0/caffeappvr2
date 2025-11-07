@@ -1,7 +1,7 @@
 {
     "announcement": "[Velkomstmelding med åpningstider]",
     "nav": {
-      "logo": "[Caffe Aroma/logo]",
+      "logo": "[Kaffe Aroma/logo]",
       "home": "hjem",
       "menu": "meny",
       "about": "oss-side",
@@ -10,13 +10,13 @@
       "bookTable": "bordbestilling"
     },
     "hero": {
-      "title": "[Velkommen til Caffe Aroma]",
+      "title": "[Velkommen til Kaffe Aroma]",
       "subtitle": "[Din lokale kafé for kvalitetskaffe og ferske bakevarer]",
       "cta": "kanpp for meny"
     },
     "categories": [
       {
-        "title": "[Caffe Meny]",
+        "title": "[Kaffe Meny]",
         "description": "[her finner du vår caffe meny]",
         "link": "[Lenketekst til kategori 1]"
       },
@@ -58,10 +58,10 @@
         "lunch": {
           "title": "[lunsj]",
           "items": [
-            { "name": "[Toast Egg & Bacon]", "price": "[Pris]" },
-            { "name": "[Surdeigsrundstykke Ost & Kalkunskinke]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" }
+            { "name": "[Toast Egg & Bacon]", "price": "[69.90kr]" },
+            { "name": "[Salat Bowl Cæsar Kylling]", "price": "[79.90kr]" },
+            { "name": "[Focaccia Pesto & Mozzarella]", "price": "[89.90kr]" },
+            { "name": "[Focaccia Kylling & Mozzarella]", "price": "[89.90kr]" }
           ]
         }
       }
