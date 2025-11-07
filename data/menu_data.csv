@@ -1,0 +1,17 @@
+id,name,price,description,image
+2,svart kaffe,59.90,En rund og balansert svart kaffe med ren smak og behagelig aroma – perfekt for enhver anledning.,
+3,Americano,59.90,En myk og balansert Americano med fyldig smak og mild intensitet – perfekt for deg som liker espressoens karakter i en lettere kopp.,https://zdbewjpdycmmfqdnmwrp.supabase.co/storage/v1/object/sign/meny/nespresso-americano-1200x1200-1.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzNhNzdjZS04MTI0LTQ3YzItYWI4My1mZmNhOTQ5MGM2ODgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZW55L25lc3ByZXNzby1hbWVyaWNhbm8tMTIwMHgxMjAwLTEud2VicCIsImlhdCI6MTc2MjUyMDUwMiwiZXhwIjoxNzk0MDU2NTAyfQ.rLkDgGm_rHuCIAyr18K6Lak0KEspWqCEyCoasVNn0QA
+4,Espresso,49.90,En intens og aromatisk espresso med rik smak og fyldig crema – perfekt alene eller som base i melkedrikker.,
+5,Surdeigsrundstykke Ost & Kalkunskinke,79.90,Nystekt surdeigsrundstykke med smeltet ost og saftig kalkunskinke – en enkel og smakfull favoritt.,
+6,Yoghurt Agave,54.99,Kremet yoghurt toppet med naturlig agavesirup – en frisk og mild start på dagen.,
+7,Focaccia Salami & Brie,89.90,"Smakfull focaccia med kremet brie og italiensk salami – en perfekt kombinasjon av mykt, salt og fyldig.",
+8,Vaniljebolle,49.99,Myk og luftig bolle fylt med søt vaniljekrem – en tidløs favoritt til kaffen.,
+9,Mudcake,69.99,Rik og saftig sjokoladekake med dyp smak og myk konsistens – perfekt for sjokoladeelskere.,
+10,Triple Chocolate Crumb,49.90,"En saftig kake med lys, mørk og hvit sjokolade – en rik og balansert sjokoladeopplevelse.",
+11,Sjokoladebolle Kokos,39.90,Myk bolle fylt med sjokolade og toppet med et dryss av kokos – en søt og saftig favoritt.,
+12,Klassisk Frokost,129.99,"Har du prøvd våre deilige surdeigsrundstykke ennå? Velg mellom kalkun & ost eller avokado & tomat. Og siden ingen frokost er komplett uten kaffe, kan du legge til din favorittlatte for å gjøre det til den ultimate morgenkomboen!",
+13,Drink of the Month Ischai,49.99,Kald og forfriskende ischai med balansert krydder og sødme – perfekt til en varm dag.,
+14,kaffe aroma kopp,99.90,"Robust og stilren kopp, perfekt til kaffe, te eller andre varme drikker.",
+15,tiramisu,59.90,"Myk og kremet tiramisu med lag av kaffe, mascarpone og kakao – en klassiker som alltid frister.",
+16,Toast Egg & Bacon,69.90,Varm toast med egg og sprø bacon – en enkel og smakfull frokostfavoritt.,
+17,Salat Bowl Cæsar Kylling,79.90,"Frisk salat med saftig kylling, sprø krutonger og kremet Cæsardressing – en klassiker i frisk drakt.",
