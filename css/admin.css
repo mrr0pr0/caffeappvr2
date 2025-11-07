@@ -5,9 +5,10 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
     min-height: 100vh;
+    color: #000000;
 }
 
 /* Login & Register Screens */
@@ -20,22 +21,24 @@ body {
 }
 
 .login-box {
-    background: white;
+    background: #ffffff;
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(5, 41, 2, 0.15);
+    border: 1px solid #064703;
     max-width: 400px;
     width: 100%;
 }
 
 .login-box h1 {
-    color: #333;
+    color: #052902;
     margin-bottom: 10px;
     font-size: 28px;
+    letter-spacing: 1px;
 }
 
 .login-box p {
-    color: #666;
+    color: #5e4c36;
     margin-bottom: 30px;
 }
 
@@ -46,72 +49,80 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
+    color: #064703;
+    font-weight: bold;
 }
 
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 6px;
+    border: 1px solid #064703;
+    border-radius: 0;
     font-size: 14px;
+    background-color: #ffffff;
     transition: border-color 0.3s;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #052902;
+    box-shadow: 0 0 0 2px rgba(5, 41, 2, 0.1);
 }
 
 .btn-primary, .btn-secondary, .btn-success {
     width: 100%;
     padding: 12px;
     border: none;
-    border-radius: 6px;
+    border-radius: 0;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
     margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary {
-    background: #667eea;
-    color: white;
+    background: #064703;
+    color: #f7f7f7;
+    border: 1px solid #064703;
 }
 
 .btn-primary:hover {
-    background: #5568d3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    background: #052902;
+    border-color: #052902;
 }
 
 .btn-secondary {
-    background: #e0e0e0;
-    color: #333;
+    background: #f7f7f7;
+    color: #052902;
+    border: 1px solid #064703;
 }
 
 .btn-secondary:hover {
-    background: #d0d0d0;
+    background: #ffffff;
+    color: #052902;
 }
 
 .btn-success {
-    background: #10b981;
-    color: white;
+    background: #064703;
+    color: #f7f7f7;
+    border: 1px solid #064703;
 }
 
 .btn-success:hover {
-    background: #059669;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    background: #052902;
+    border-color: #052902;
 }
 
 .error-message {
-    color: #ef4444;
+    color: #052902;
     margin-top: 10px;
     font-size: 14px;
     display: none;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #052902;
 }
 
 .error-message.show {
@@ -119,10 +130,13 @@ body {
 }
 
 .success-message {
-    color: #10b981;
+    color: #052902;
     margin-top: 10px;
     font-size: 14px;
     display: none;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #064703;
 }
 
 .success-message.show {
@@ -132,34 +146,38 @@ body {
 .info-box {
     margin-top: 30px;
     padding: 20px;
-    background: #f3f4f6;
-    border-radius: 6px;
+    background: #f7f7f7;
+    border: 1px solid #064703;
+    border-radius: 0;
     text-align: center;
 }
 
 .info-box p {
     margin-bottom: 10px;
     font-size: 14px;
+    color: #5e4c36;
 }
 
 /* Admin Dashboard */
 #admin-dashboard {
     min-height: 100vh;
-    background: #f5f5f5;
+    background: #f7f7f7;
 }
 
 .admin-header {
-    background: white;
+    background: #f7f7f7;
     padding: 20px 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(5, 41, 2, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #064703;
 }
 
 .admin-header h1 {
-    color: #333;
+    color: #052902;
     font-size: 24px;
+    letter-spacing: 1px;
 }
 
 .header-actions {
@@ -169,7 +187,7 @@ body {
 }
 
 .user-info {
-    color: #666;
+    color: #5e4c36;
     font-size: 14px;
 }
 
@@ -180,11 +198,11 @@ body {
 }
 
 .admin-nav {
-    background: white;
+    background: #ffffff;
     padding: 0 40px;
     display: flex;
     gap: 10px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 1px solid #064703;
 }
 
 .nav-btn {
@@ -195,17 +213,18 @@ body {
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
-    color: #666;
+    color: #064703;
     transition: all 0.3s;
+    letter-spacing: 0.5px;
 }
 
 .nav-btn:hover {
-    color: #667eea;
+    color: #052902;
 }
 
 .nav-btn.active {
-    color: #667eea;
-    border-bottom-color: #667eea;
+    color: #052902;
+    border-bottom-color: #064703;
 }
 
 .admin-content {
@@ -222,8 +241,9 @@ body {
 }
 
 .content-header h2 {
-    color: #333;
+    color: #052902;
     font-size: 28px;
+    letter-spacing: 1px;
 }
 
 .action-buttons {
@@ -238,22 +258,23 @@ body {
 }
 
 #editor-container {
-    background: white;
-    border-radius: 8px;
+    background: #ffffff;
+    border-radius: 0;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(5, 41, 2, 0.15);
+    border: 1px solid #064703;
 }
 
 .editor-info {
-    background: #fef3c7;
-    border-left: 4px solid #f59e0b;
+    background: #f7f7f7;
+    border-left: 4px solid #064703;
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .editor-info p {
-    color: #92400e;
+    color: #5e4c36;
     font-size: 14px;
 }
 
@@ -263,21 +284,23 @@ body {
     padding: 20px;
     font-family: 'Courier New', monospace;
     font-size: 14px;
-    border: 2px solid #e0e0e0;
-    border-radius: 6px;
+    border: 1px solid #064703;
+    border-radius: 0;
     resize: vertical;
     line-height: 1.6;
+    background-color: #ffffff;
 }
 
 #json-editor:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #052902;
+    box-shadow: 0 0 0 2px rgba(5, 41, 2, 0.1);
 }
 
 .status-message {
     margin-top: 20px;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 0;
     font-weight: 500;
     display: none;
 }
@@ -287,15 +310,15 @@ body {
 }
 
 .status-message.success {
-    background: #d1fae5;
-    color: #065f46;
-    border-left: 4px solid #10b981;
+    background: #f7f7f7;
+    color: #052902;
+    border-left: 4px solid #064703;
 }
 
 .status-message.error {
-    background: #fee2e2;
-    color: #991b1b;
-    border-left: 4px solid #ef4444;
+    background: #f7f7f7;
+    color: #052902;
+    border-left: 4px solid #052902;
 }
 
 /* Responsive */
