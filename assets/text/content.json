@@ -1,7 +1,7 @@
 {
     "announcement": "[Velkomstmelding med åpningstider]",
     "nav": {
-      "logo": "[Kaféens navn/logo]",
+      "logo": "[Caffe Aroma/logo]",
       "home": "hjem",
       "menu": "meny",
       "about": "oss-side",
@@ -10,24 +10,24 @@
       "bookTable": "bordbestilling"
     },
     "hero": {
-      "title": "[/velkommen-tittel]",
+      "title": "[Meny]",
       "subtitle": "[Undertekst med beskrivelse av kaféen]",
       "cta": "[kanpp for meny]"
     },
     "categories": [
       {
-        "title": "[Kategoritittel 1]",
-        "description": "[Beskrivelse av kategori 1]",
+        "title": "[Caffe Meny]",
+        "description": "[her finner du vår caffe meny]",
         "link": "[Lenketekst til kategori 1]"
       },
       {
-        "title": "[Kategoritittel 2]",
-        "description": "[Beskrivelse av kategori 2]",
+        "title": "[Mat Meny]",
+        "description": "[her finner du vår mat meny ]",
         "link": "[Lenketekst til kategori 2]"
       },
       {
-        "title": "[Kategoritittel 3]",
-        "description": "[Beskrivelse av kategori 3]",
+        "title": "[Om Oss]",
+        "description": "[her kan du lese om oss]",
         "link": "[Lenketekst til kategori 3]"
       }
     ],
@@ -35,15 +35,15 @@
     
     "menu": {
       "title": "[mest populære retter]",
-      "subtitle": "[undertekst som oppsummerer menutilbudet]",
+      "subtitle": "[her kan du finne våre mest populære retter]",
       "categories": {
         "coffee": {
           "title": "[kaffe]",
           "items": [
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" }
+            { "name": "[Espresso]", "price": "[49.90kr]" },
+            { "name": "[Islate]", "price": "[59.90kr]" },
+            { "name": "[Cappuccino]", "price": "[49.90kr]" },
+            { "name": "[Americano]", "price": "[59.90kr]" }
           ]
         },
         "bakery": {
