@@ -8,23 +8,23 @@
 </head>
 <body>
     <!-- Announcement Bar -->
-    <div class="announcement-bar"></div>
+    <div class="announcement-bar">Velkommen til Caffè – åpent hver dag 08–18</div>
 
     <!-- Header -->
     <header class="header">
         <div class="nav-container">
-            <a href="index.html" class="logo"></a>
+            <a href="index.html" class="logo">Caffè</a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html"></a></li>
-                    <li><a href="meny.html"></a></li>
-                    <li><a href="om-oss.html"></a></li>
-                    <li><a href="sted.html"></a></li>
-                    <li><a href="kontakt.html"></a></li>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="meny.html">Meny</a></li>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="sted.html">Sted</a></li>
+                    <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
-                <a href="kontakt.html"></a>
+                <a href="kontakt.html" class="btn-link">Kontakt oss</a>
                 <a href="admin.html" class="admin-link" style="margin-left: 10px; font-size: 12px; opacity: 0.7;">Admin</a>
             </div>
         </div>
@@ -32,63 +32,63 @@
 
     <!-- Contact Hero -->
     <section class="contact-hero">
-        <h1></h1>
-        <p></p>
+        <h1>Kontakt oss</h1>
+        <p>Har du spørsmål, ønsker å bestille bord eller gi oss tilbakemelding? Vi hører gjerne fra deg.</p>
     </section>
 
     <!-- Contact Content -->
     <section class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
-                <h2></h2>
+                <h2>Kontaktinformasjon</h2>
                 <div class="contact-item">
-                    <h3></h3>
-                    <p></p>
+                    <h3>Adresse</h3>
+                    <p>Kaffegata 1, 0123 Oslo</p>
                 </div>
                 <div class="contact-item">
-                    <h3></h3>
-                    <p><a href=""></a></p>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+4712345678">+47 12 34 56 78</a></p>
                 </div>
                 <div class="contact-item">
-                    <h3></h3>
-                    <p><a href=""></a></p>
+                    <h3>E‑post</h3>
+                    <p>Bruk kontaktskjemaet under – vi svarer på e‑post.</p>
                 </div>
                 <div class="contact-item">
-                    <h3></h3>
-                    <p></p>
+                    <h3>Åpningstider</h3>
+                    <p>Man–Fre: 08–18 · Lør–Søn: 10–17</p>
                 </div>
             </div>
 
             <div class="contact-form-container">
-                <h2></h2>
-                <form class="contact-form" id="contactForm">
+                <h2>Send oss en melding</h2>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                     <div class="form-group">
-                        <label for="name"></label>
+                        <label for="name">Navn</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email"></label>
+                        <label for="email">E‑post</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone"></label>
+                        <label for="phone">Telefon</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
                     <div class="form-group">
-                        <label for="subject"></label>
+                        <label for="subject">Emne</label>
                         <select id="subject" name="subject">
-                            <option value=""></option>
-                            <option value="bordbestilling"></option>
-                            <option value="catering"></option>
-                            <option value="generell"></option>
-                            <option value="klage"></option>
+                            <option value="">Velg emne</option>
+                            <option value="bordbestilling">Bordbestilling</option>
+                            <option value="catering">Catering</option>
+                            <option value="generell">Generell henvendelse</option>
+                            <option value="klage">Klage</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message"></label>
+                        <label for="message">Melding</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn"></button>
+                    <button type="submit" class="submit-btn" id="contactSubmit">Send</button>
                 </form>
             </div>
         </div>
@@ -96,11 +96,11 @@
 
     <!-- Map Section -->
     <section class="map-section">
-        <h2></h2>
+        <h2>Finn oss</h2>
         <div class="map-placeholder">
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>Vi holder til i hjertet av Oslo.</p>
+            <p>Nærmeste trikk: Linje 12 – Kaffegata.</p>
+            <p>Parkering i gaten eller P-hus i nærheten.</p>
         </div>
     </section>
 
@@ -108,48 +108,41 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3></h3>
+                <h3>Navigasjon</h3>
                 <ul>
-                    <li><a href="om-oss.html"></a></li>
-                    <li><a href="sted.html"></a></li>
-                    <li><a href="kontakt.html"></a></li>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="sted.html">Sted</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3></h3>
+                <h3>Meny</h3>
                 <ul>
-                    <li><a href="index.html#menu"></a></li>
-                    <li><a href="index.html#menu"></a></li>
-                    <li><a href="index.html#menu"></a></li>
+                    <li><a href="index.html#menu">Kaffe</a></li>
+                    <li><a href="index.html#menu">Bakst</a></li>
+                    <li><a href="index.html#menu">Lunsj</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3></h3>
+                <h3>Kontakt</h3>
                 <ul>
-                    <li><a href="tel:+4712345678"></a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#d5a5baa6a195b6b4b3b3b0fbbbba"></a></li>
-                    <li></li>
+                    <li><a href="tel:+4712345678">+47 12 34 56 78</a></li>
+                    <li>E‑post ikke tilgjengelig</li>
+                    <li>Kaffegata 1, 0123 Oslo</li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3></h3>
+                <h3>Åpningstider</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Man–Fre: 08–18</li>
+                    <li>Lør–Søn: 10–17</li>
                 </ul>
             </div>
         </div>
         
-        <div class="newsletter">
-            <h3></h3>
-            <p></p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="" required>
-                <button type="submit"></button>
-            </form>
-        </div>
+        <!-- Newsletter removed as e‑postfunksjon er deaktivert -->
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="./js/content-loader-supabase.js"></script>
+    <script type="module" src="./js/content-loader-supabase.js"></script>
 </body>
 </html>

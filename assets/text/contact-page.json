@@ -1,13 +1,13 @@
 {
     "announcement": "[Velkomstmelding med åpningstider]",
     "nav": {
-      "logo": "[Kaféens merkenavn]",
-      "home": "[Lenke til forsiden]",
-      "menu": "[Lenke til menysiden]",
-      "about": "[Lenke til om oss-siden]",
-      "location": "[Lenke til stedsinformasjon]",
-      "contact": "[Lenke til kontaktside]",
-      "bookTable": "[Knapp for bordreservasjon]"
+      "logo": "[Kaféens navn/logo]",
+      "home": "hjem",
+      "menu": "meny",
+      "about": "oss-side",
+      "location": "stedsinformasjon",
+      "contact": "kontaktinformasjon",
+      "bookTable": "bordbestilling"
     },
     "hero": {
       "title": "[Hovedoverskrift med velkommen]",
