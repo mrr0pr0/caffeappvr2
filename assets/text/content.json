@@ -74,23 +74,25 @@
     "footer": {
       "sections": [
         {
-          "title": "[Footer-seksjon 1 tittel]",
+          "title": "[finn oss på sosiale medier]",
           "links": [
-            { "text": "[Lenketekst]", "url": "[URL]" },
-            { "text": "[Lenketekst]", "url": "[URL]" },
-            { "text": "[Lenketekst]", "url": "[URL]" }
+            { "text": "[Snapchat]", "url": "[URL]" },
+            { "text": "[Instagram]", "url": "[URL]" },
+            { "text": "[Facebook]", "url": "[URL]" },
+            { "text": "[TikTok]", "url": "[URL]" },
+            { "text": "[Tiktok]", "url": "[URL]" }
           ]
         },
         {
           "title": "[Footer-seksjon 2 tittel]",
           "links": [
-            { "text": "[Lenketekst]", "url": "[URL]" },
+            { "text": "[slettt]", "url": "[URL]" },
             { "text": "[Lenketekst]", "url": "[URL]" },
             { "text": "[Lenketekst]", "url": "[URL]" }
           ]
         },
         {
-          "title": "[Footer-seksjon 3 tittel - kontaktinfo]",
+          "title": "[kontaktinformasjon]",
           "links": [
             { "text": "[Telefonnummer]", "url": "[Tel-link]" },
             { "text": "[E-postadresse]", "url": "[Mailto-link]" },
