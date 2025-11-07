@@ -1,0 +1,115 @@
+{
+    "announcement": "[Velkomstmelding med åpningstider]",
+    "nav": {
+      "logo": "[Kaféens navn/logo]",
+      "home": "hjem",
+      "menu": "meny",
+      "about": "oss-side",
+      "location": "stedsinformasjon",
+      "contact": "kontaktinformasjon",
+      "bookTable": "bordbestilling"
+    },
+    "hero": {
+      "title": "[Hovedoverskrift/velkommen-tittel]",
+      "subtitle": "[Undertekst med beskrivelse av kaféen]",
+      "cta": "[Handlingsknapp]"
+    },
+    "categories": [
+      {
+        "title": "[Kategoritittel 1]",
+        "description": "[Beskrivelse av kategori 1]",
+        "link": "[Lenketekst til kategori 1]"
+      },
+      {
+        "title": "[Kategoritittel 2]",
+        "description": "[Beskrivelse av kategori 2]",
+        "link": "[Lenketekst til kategori 2]"
+      },
+      {
+        "title": "[Kategoritittel 3]",
+        "description": "[Beskrivelse av kategori 3]",
+        "link": "[Lenketekst til kategori 3]"
+      }
+    ],
+  
+    
+    "menu": {
+      "title": "[Meny-overskrift]",
+      "subtitle": "[Meny-undertekst]",
+      "categories": {
+        "coffee": {
+          "title": "[Kafé-kategori overskrift]",
+          "items": [
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" }
+          ]
+        },
+        "bakery": {
+          "title": "[Bakst-kategori overskrift]",
+          "items": [
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" }
+          ]
+        },
+        "lunch": {
+          "title": "[Lunsj-kategori overskrift]",
+          "items": [
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Produktnavn]", "price": "[Pris]" }
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "[Call-to-action overskrift]",
+      "description": "[Beskrivelse som oppfordrer til besøk]",
+      "button": "[Handlingsknapp]"
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "[Footer-seksjon 1 tittel]",
+          "links": [
+            { "text": "[Lenketekst]", "url": "[URL]" },
+            { "text": "[Lenketekst]", "url": "[URL]" },
+            { "text": "[Lenketekst]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 2 tittel]",
+          "links": [
+            { "text": "[Lenketekst]", "url": "[URL]" },
+            { "text": "[Lenketekst]", "url": "[URL]" },
+            { "text": "[Lenketekst]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 3 tittel - kontaktinfo]",
+          "links": [
+            { "text": "[Telefonnummer]", "url": "[Tel-link]" },
+            { "text": "[E-postadresse]", "url": "[Mailto-link]" },
+            { "text": "[Fysisk adresse]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 4 tittel - åpningstider]",
+          "links": [
+            { "text": "[Ukedager og tider]", "url": "[URL]" },
+            { "text": "[Helgedager og tider]", "url": "[URL]" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "title": "[Nyhetsbrev-overskrift]",
+        "description": "[Nyhetsbrev-beskrivelse]",
+        "placeholder": "[Placeholder-tekst for e-postfelt]",
+        "button": "[Påmeldingsknapp]"
+      }
+    }
+  }

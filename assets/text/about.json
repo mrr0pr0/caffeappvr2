@@ -1,0 +1,116 @@
+{
+    "announcement": "[Velkomstmelding med åpningstider]",
+    "nav": {
+      "logo": "Caffè",
+      "home": "Hjem",
+      "menu": "Meny",
+      "about": "Om Oss",
+      "location": "Sted",
+      "contact": "Kontakt",
+      "bookTable": "Bestill Bord"
+    },
+    "hero": {
+      "title": "Om Oss",
+      "subtitle": "[Undertekst med beskrivelse av kaféen]"
+    },
+    "story": {
+      "title": "Vår Historie",
+      "paragraphs": [
+        "[Første avsnitt om kaféens grunnleggelse og bakgrunn.]",
+        "[Andre avsnitt om kaféens vekst og utvikling over tid.]"
+      ]
+    },
+    "values": {
+      "title": "Våre Verdier",
+      "items": [
+        {
+          "icon": "☕",
+          "title": "Kvalitet",
+          "description": "[description]"
+        },
+        {
+          "icon": "🌱",
+          "title": "Bærekraft",
+          "description": "[description]"
+        },
+        {
+          "icon": "[emoji]",
+          "title": "[title]",
+          "description": "[description]"
+        },
+        {
+          "icon": "[emoji]",
+          "title": "[title]",
+          "description": "[description]"
+        }
+      ]
+    },
+    "team": {
+      "title": "Møt Teamet",
+      "members": [
+        {
+          "name": "[Navn]",
+          "role": "[Rolle]",
+          "description": "[Kort biografi eller beskrivelse]"
+        },
+        {
+          "name": "[Navn]",
+          "role": "[Rolle]",
+          "description": "[Kort biografi eller beskrivelse]"
+        },
+        {
+          "name": "[Navn]",
+          "role": "   [Rolle]",
+          "description": "[Kort biografi eller beskrivelse]"
+        }
+      ]
+    },
+    "mission": {
+      "title": "Vårt Oppdrag",
+      "paragraphs": [
+        "[Første avsnitt om kaféens oppdrag og mål.]",
+        "[Andre avsnitt om hvordan kaféen jobber for å oppnå dette.]"
+      ]
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Caffè",
+          "links": [
+            { "text": "Om Oss", "url": "om-oss.html" },
+            { "text": "Vårt Sted", "url": "sted.html" },
+            { "text": "Kontakt", "url": "kontakt.html" }
+          ]
+        },
+        {
+          "title": "Meny",
+          "links": [
+            { "text": "Kaffe", "url": "index.html#menu" },
+            { "text": "Bakst", "url": "index.html#menu" },
+            { "text": "Lunsj", "url": "index.html#menu" }
+          ]
+        },
+        {
+          "title": "Kontakt",
+          "links": [
+            { "text": "+47 123 45 678", "url": "tel:+4712345678" },
+            { "text": "post@caffe.no", "url": "mailto:post@caffe.no" },
+            { "text": "[Fysisk adresse]", "url": "" }
+          ]
+        },
+        {
+          "title": "Åpningstider",
+          "links": [
+            { "text": "Man-Fre: 07:00-20:00", "url": "" },
+            { "text": "Lør-Søn: 08:00-18:00", "url": "" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "title": "Hold deg oppdatert",
+        "description": "[Beskrivelse av nyhetsbrevet]",
+        "placeholder": "Din e-postadresse",
+        "button": "MELD DEG PÅ"
+      }
+    }
+  }

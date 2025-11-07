@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Caffè</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="login-container">
+            <div class="login-box">
+                <h1>🔐 Admin Login</h1>
+                <p>Logg inn for å redigere innhold</p>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">E-post</label>
+                        <input type="email" id="email" required placeholder="admin@caffe.no">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Passord</label>
+                        <input type="password" id="password" required placeholder="Ditt passord">
+                    </div>
+                    <button type="submit" class="btn-primary">Logg Inn</button>
+                    <div id="login-error" class="error-message"></div>
+                </form>
+                <div class="info-box">
+                    <p><strong>Første gang?</strong></p>
+                    <p>Registrer en admin-bruker ved å bruke registreringsskjemaet nedenfor.</p>
+                    <button id="show-register" class="btn-secondary">Registrer Admin</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Screen -->
+        <div id="register-screen" class="login-container" style="display: none;">
+            <div class="login-box">
+                <h1>👤 Registrer Admin</h1>
+                <p>Opprett en ny admin-bruker</p>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-email">E-post</label>
+                        <input type="email" id="reg-email" required placeholder="admin@caffe.no">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Passord</label>
+                        <input type="password" id="reg-password" required placeholder="Minst 6 tegn">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-name">Fullt navn</label>
+                        <input type="text" id="reg-name" required placeholder="Ditt navn">
+                    </div>
+                    <button type="submit" class="btn-primary">Registrer</button>
+                    <button type="button" id="back-to-login" class="btn-secondary">Tilbake til innlogging</button>
+                    <div id="register-error" class="error-message"></div>
+                    <div id="register-success" class="success-message"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" style="display: none;">
+            <header class="admin-header">
+                <h1>☕ Caffè Admin Panel</h1>
+                <div class="header-actions">
+                    <span id="user-email" class="user-info"></span>
+                    <button id="logout-btn" class="btn-secondary">Logg Ut</button>
+                </div>
+            </header>
+
+            <nav class="admin-nav">
+                <button class="nav-btn active" data-file="content">Hovedside</button>
+                <button class="nav-btn" data-file="about">Om Oss</button>
+                <button class="nav-btn" data-file="location">Sted</button>
+                <button class="nav-btn" data-file="contact-page">Kontakt</button>
+            </nav>
+
+            <main class="admin-content">
+                <div class="content-header">
+                    <h2 id="current-file-title">Rediger Hovedside</h2>
+                    <div class="action-buttons">
+                        <button id="save-btn" class="btn-success">💾 Lagre Endringer</button>
+                        <button id="reload-btn" class="btn-secondary">🔄 Last på nytt</button>
+                    </div>
+                </div>
+                
+                <div id="editor-container">
+                    <div class="editor-info">
+                        <p>⚠️ Vær forsiktig når du redigerer JSON. Ugyldig format kan ødelegge nettsiden.</p>
+                    </div>
+                    <textarea id="json-editor" spellcheck="false"></textarea>
+                </div>
+
+                <div id="save-status" class="status-message"></div>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="./js/admin.js"></script>
+</body>
+</html>

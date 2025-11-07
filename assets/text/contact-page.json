@@ -1,0 +1,113 @@
+{
+    "announcement": "[Velkomstmelding med åpningstider]",
+    "nav": {
+      "logo": "[Kaféens merkenavn]",
+      "home": "[Lenke til forsiden]",
+      "menu": "[Lenke til menysiden]",
+      "about": "[Lenke til om oss-siden]",
+      "location": "[Lenke til stedsinformasjon]",
+      "contact": "[Lenke til kontaktside]",
+      "bookTable": "[Knapp for bordreservasjon]"
+    },
+    "hero": {
+      "title": "[Hovedoverskrift med velkommen]",
+      "subtitle": "[Undertekst som beskriver kaféopplevelsen]",
+      "cta": "[Handlingsknapp]"
+    },
+    "categories": [
+      {
+        "title": "[Kategoritittel for kaffeområdet]",
+        "description": "[Beskrivelse av kaffeprodukter og kvalitet]",
+        "link": "[Lenketekst til kaffeundermeny]"
+      },
+      {
+        "title": "[Kategoritittel for bakeriområdet]",
+        "description": "[Beskrivelse av bakevarer og ferskhet]",
+        "link": "[Lenketekst til bakstundermeny]"
+      },
+      {
+        "title": "[Kategoritittel for lunsjområdet]",
+        "description": "[Beskrivelse av lunsjretter og ingredienser]",
+        "link": "[Lenketekst til lunsjundermeny]"
+      }
+    ],
+    "menu": {
+      "title": "[Hovedoverskrift for menyseksjon]",
+      "subtitle": "[Undertekst som oppsummerer menutilbudet]",
+      "categories": {
+        "coffee": {
+          "title": "[Overskrift for kaffekategori]",
+          "items": [
+            { "name": "[Kaffetype 1]", "price": "[Pris]" },
+            { "name": "[Kaffetype 2]", "price": "[Pris]" },
+            { "name": "[Kaffetype 3]", "price": "[Pris]" },
+            { "name": "[Kaffetype 4]", "price": "[Pris]" }
+          ]
+        },
+        "bakery": {
+          "title": "[Overskrift for bakstkategori]",
+          "items": [
+            { "name": "[Bakverk 1]", "price": "[Pris]" },
+            { "name": "[Bakverk 2]", "price": "[Pris]" },
+            { "name": "[Bakverk 3]", "price": "[Pris]" },
+            { "name": "[Bakverk 4]", "price": "[Pris]" }
+          ]
+        },
+        "lunch": {
+          "title": "[Overskrift for lunsjkategori]",
+          "items": [
+            { "name": "[Lunsjrett 1]", "price": "[Pris]" },
+            { "name": "[Lunsjrett 2]", "price": "[Pris]" },
+            { "name": "[Lunsjrett 3]", "price": "[Pris]" },
+            { "name": "[Lunsjrett 4]", "price": "[Pris]" }
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "[Oppfordrende overskrift for besøk]",
+      "description": "[Inviterende beskrivelse av atmosfæren]",
+      "button": "[Kontakthandlingsknapp]"
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "[Footer-seksjon 1: Merkevare/navigasjon]",
+          "links": [
+            { "text": "[Lenke til om oss]", "url": "[URL]" },
+            { "text": "[Lenke til stedsinformasjon]", "url": "[URL]" },
+            { "text": "[Lenke til kontaktside]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 2: Menylenker]",
+          "links": [
+            { "text": "[Lenke til kaffemeny]", "url": "[URL]" },
+            { "text": "[Lenke til bakstmeny]", "url": "[URL]" },
+            { "text": "[Lenke til lunsjmeny]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 3: Kontaktinformasjon]",
+          "links": [
+            { "text": "[Telefonnummer]", "url": "[Telefon-URL]" },
+            { "text": "[E-postadresse]", "url": "[E-post-URL]" },
+            { "text": "[Gateadresse og postnummer]", "url": "[URL]" }
+          ]
+        },
+        {
+          "title": "[Footer-seksjon 4: Åpningstider]",
+          "links": [
+            { "text": "[Ukedager og tidsrom]", "url": "[URL]" },
+            { "text": "[Helgedager og tidsrom]", "url": "[URL]" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "title": "[Overskrift for nyhetsbrevpåmelding]",
+        "description": "[Beskrivelse av nyhetsbrevfordeler]",
+        "placeholder": "[Placeholder-tekst for e-postinputfelt]",
+        "button": "[Påmeldingsknapp]"
+      }
+    }
+  }
