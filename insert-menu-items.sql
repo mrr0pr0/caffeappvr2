@@ -1,0 +1,15 @@
+-- Insert menu items into the menu table
+-- Copy and paste this into Supabase SQL Editor
+-- Note: id will be auto-generated, image can be added later
+
+INSERT INTO menu (name, price, description) VALUES
+('Svart Kaffe', 59.90, 'En rund og balansert svart kaffe med ren smak og behagelig aroma – perfekt for enhver anledning.'),
+('Americano', 59.90, 'En myk og balansert Americano med fyldig smak og mild intensitet – perfekt for deg som liker espressoens karakter i en lettere kopp.'),
+('Espresso', 49.90, 'En intens og aromatisk espresso med rik smak og fyldig crema – perfekt alene eller som base i melkedrikker.'),
+('Surdeigsrundstykke Ost & Kalkunskinke', 79.90, 'Nystekt surdeigsrundstykke med smeltet ost og saftig kalkunskinke – en enkel og smakfull favoritt.'),
+('Yoghurt Agave', 54.99, 'Kremet yoghurt toppet med naturlig agavesirup – en frisk og mild start på dagen.'),
+('Focaccia Salami & Brie', 89.90, 'Smakfull focaccia med kremet brie og italiensk salami – en perfekt kombinasjon av mykt, salt og fyldig.'),
+('Vaniljebolle', 49.99, 'Myk og luftig bolle fylt med søt vaniljekrem – en tidløs favoritt til kaffen.'),
+('Mudcake', 69.99, 'Rik og saftig sjokoladekake med dyp smak og myk konsistens – perfekt for sjokoladeelskere.'),
+('Triple Chocolate Crumb', 49.90, 'En saftig kake med lys, mørk og hvit sjokolade – en rik og balansert sjokoladeopplevelse.'),
+('Sjokoladebolle Kokos', 39.90, 'Myk bolle fylt med sjokolade og toppet med et dryss av kokos – en søt og saftig favoritt.');

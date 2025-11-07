@@ -49,8 +49,8 @@
         "bakery": {
           "title": "[bakst]",
           "items": [
-            { "name": "[Produktnavn]", "price": "[Pris]" },
-            { "name": "[Produktnavn]", "price": "[Pris]" },
+            { "name": "[Sjokolade croissant]", "price": "[Pris]" },
+            { "name": "[]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" }
           ]
