@@ -3,6 +3,38 @@ const contentCache = {};
 let supabaseClient = null;
 let supabaseLoadAttempted = false;
 
+// Function to clear content cache (useful for development)
+function clearContentCache() {
+    Object.keys(contentCache).forEach(key => delete contentCache[key]);
+    console.log('Content cache cleared');
+}
+
+// Make it available globally for console access
+window.clearContentCache = clearContentCache;
+
+// Function to reload content (clears cache and reloads)
+async function reloadContent() {
+    clearContentCache();
+    await loadContent();
+    console.log('Content reloaded');
+}
+
+// Make it available globally for console access
+window.reloadContent = reloadContent;
+
+// Check if we should bypass cache (for development)
+function shouldBypassCache() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.has('nocache') || urlParams.has('refresh');
+}
+
+// Check if we're in development mode (localhost or file:// protocol)
+function isDevelopmentMode() {
+    return window.location.hostname === 'localhost' || 
+           window.location.hostname === '127.0.0.1' ||
+           window.location.protocol === 'file:';
+}
+
 /**
  * Try to load Supabase client (lazy load)
  */
@@ -26,33 +58,50 @@ async function getSupabaseClient() {
  * Load content from Supabase or fallback to local JSON files
  */
 async function loadContentFromSupabase(filename) {
-    // Check cache first
-    if (contentCache[filename]) {
+    // Check cache first (unless bypassing cache)
+    if (!shouldBypassCache() && contentCache[filename]) {
         return contentCache[filename];
     }
     
+    // Clear cache for this file if bypassing cache
+    if (shouldBypassCache()) {
+        delete contentCache[filename];
+    }
+    
     // Try to load from Supabase first (if available)
-    const supabase = await getSupabaseClient();
-    if (supabase) {
-        try {
-            const { data, error } = await supabase
-                .from('json_files')
-                .select('content')
-                .eq('filename', filename)
-                .single();
-            
-            if (data && data.content) {
-                contentCache[filename] = data.content;
-                return data.content;
+    // In development mode, prefer local files. You can also add ?useLocal=true to URL to force local files
+    // or ?useSupabase=true to force Supabase even in development
+    const urlParams = new URLSearchParams(window.location.search);
+    const useLocal = urlParams.has('useLocal') || (isDevelopmentMode() && !urlParams.has('useSupabase'));
+    
+    if (!useLocal) {
+        const supabase = await getSupabaseClient();
+        if (supabase) {
+            try {
+                const { data, error } = await supabase
+                    .from('json_files')
+                    .select('content')
+                    .eq('filename', filename)
+                    .single();
+                
+                if (data && data.content) {
+                    contentCache[filename] = data.content;
+                    return data.content;
+                }
+            } catch (error) {
+                console.log('Supabase not available, loading from local file');
             }
-        } catch (error) {
-            console.log('Supabase not available, loading from local file');
         }
     }
     
-    // Fallback to local file
+    // Fallback to local file with cache-busting
     try {
-        const response = await fetch(`./assets/text/${filename}.json`);
+        // Add cache-busting parameter to prevent browser caching
+        // Use timestamp when bypassing cache, or use a more stable version otherwise
+        const cacheBuster = shouldBypassCache() ? `?t=${Date.now()}` : `?v=${Math.floor(Date.now() / 1000)}`;
+        const response = await fetch(`./assets/text/${filename}.json${cacheBuster}`, {
+            cache: shouldBypassCache() ? 'no-cache' : 'no-store'  // Always bypass browser cache for JSON files
+        });
         if (!response.ok) {
             throw new Error(`Failed to fetch ${filename}.json: ${response.status}`);
         }
