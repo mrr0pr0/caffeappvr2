@@ -34,11 +34,11 @@
   
     
     "menu": {
-      "title": "[Meny-overskrift]",
-      "subtitle": "[Meny-undertekst]",
+      "title": "[mest populære retter]",
+      "subtitle": "[undertekst som oppsummerer menutilbudet]",
       "categories": {
         "coffee": {
-          "title": "[Kafé-kategori overskrift]",
+          "title": "[kaffe]",
           "items": [
             { "name": "[Produktnavn]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" },
@@ -47,7 +47,7 @@
           ]
         },
         "bakery": {
-          "title": "[Bakst-kategori overskrift]",
+          "title": "[bakst]",
           "items": [
             { "name": "[Produktnavn]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" },
@@ -56,7 +56,7 @@
           ]
         },
         "lunch": {
-          "title": "[Lunsj-kategori overskrift]",
+          "title": "[lunsj]",
           "items": [
             { "name": "[Produktnavn]", "price": "[Pris]" },
             { "name": "[Produktnavn]", "price": "[Pris]" },

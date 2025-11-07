@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffè - Meny</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="announcement-bar"></div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#menu" class="active">Meny</a></li>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="sted.html">Sted</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="admin.html" class="admin-link" style="margin-left: 10px; font-size: 12px; opacity: 0.7;">Admin</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <h1>Vår meny</h1>
+        <p>Direkte fra vårt kjøkken og kaffebar. Oppdatert fra Supabase.</p>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <h2 class="section-title">Meny</h2>
+        <p class="section-subtitle">Bilder og retter lastes fra Supabase</p>
+
+        <div id="menu-root" class="menu-container"></div>
+
+        <div id="menu-empty" class="empty-state" style="display:none; text-align:center; padding:40px 0;">
+            <p>Ingen menyelementer er tilgjengelige ennå.</p>
+        </div>
+
+        <div id="menu-error" class="status-message error" style="display:none; text-align:center;"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Caffè</h3>
+                <ul>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="sted.html">Sted</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Meny</h3>
+                <ul>
+                    <li><a href="#menu">Kaffe</a></li>
+                    <li><a href="#menu">Mat</a></li>
+                    <li><a href="#menu">Bakverk</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="tel:+4712345678">+47 12 34 56 78</a></li>
+                    <li><a href="mailto:post@example.com">post@example.com</a></li>
+                    <li>Åpent alle dager</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Følg oss</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/meny.js"></script>
+</body>
+</html>
+
