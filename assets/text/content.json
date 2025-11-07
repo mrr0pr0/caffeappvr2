@@ -49,7 +49,7 @@
         "bakery": {
           "title": "[bakst/deserter]",
           "items": [
-            { "name": "[sjokoladebolle Kokos]", "price": "[39.90kr]" },
+            { "name": "[Sjokoladebolle Kokos]", "price": "[39.90kr]" },
             { "name": "[Focaccia Salami & Brie]", "price": "[89.90kr]" },
             { "name": "[Triple Chocolade Crumb]", "price": "[49.90kr]" },
             { "name": "[Tiramisu]", "price": "[49.90kr]" }
