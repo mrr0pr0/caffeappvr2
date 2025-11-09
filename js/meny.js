@@ -1,5 +1,9 @@
 // Supabase Menu Data Loader
-import { supabase } from '../lib/supabaseClient.js';
+const supabaseUrl = 'https://zdbewjpdycmmfqdnmwrp.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYmV3anBkeWNtbWZxZG5td3JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI0OTM5NDgsImV4cCI6MjA3ODA2OTk0OH0.2qC9JiNIpmGkmPYAh4ky83iG0od6o7H_tgiAn4jNf1s';
+
+// Initialize Supabase client from CDN
+const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
 
 class SupabaseMenuLoader {
     constructor() {
@@ -139,5 +143,45 @@ class SupabaseMenuLoader {
         });
     }
 }
+
+// Initialize and load menu when DOM is ready
+document.addEventListener('DOMContentLoaded', async () => {
+    const menuContainer = document.getElementById('menu-root');
+    const emptyState = document.getElementById('menu-empty');
+    const errorState = document.getElementById('menu-error');
+    
+    if (!menuContainer) {
+        console.error('Menu container not found');
+        return;
+    }
+
+    const loader = new SupabaseMenuLoader();
+    
+    try {
+        // Show loading state
+        menuContainer.innerHTML = '<div style="text-align:center; padding:40px 0;">Laster meny...</div>';
+        
+        // Load menu data
+        const menuItems = await loader.loadMenuData();
+        
+        // Render menu
+        if (menuItems && menuItems.length > 0) {
+            loader.renderMenu(menuItems, menuContainer);
+            if (emptyState) emptyState.style.display = 'none';
+            if (errorState) errorState.style.display = 'none';
+        } else {
+            menuContainer.innerHTML = '';
+            if (emptyState) emptyState.style.display = 'block';
+        }
+        
+    } catch (error) {
+        console.error('Failed to load menu:', error);
+        menuContainer.innerHTML = '';
+        if (errorState) {
+            errorState.textContent = 'Kunne ikke laste meny. Vennligst prøv igjen senere.';
+            errorState.style.display = 'block';
+        }
+    }
+});
 
 export { SupabaseMenuLoader };
