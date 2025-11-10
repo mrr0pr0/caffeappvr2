@@ -26,13 +26,13 @@
     "hours": {
       "title": "🕐 Åpningstider",
       "schedule": [
-          { "day": "Mandag",  "hours": "x - x", "weekend": false },
-          { "day": "Tirsdag", "hours": "x - x", "weekend": false },
-          { "day": "Onsdag",  "hours": "x - x", "weekend": false },
-          { "day": "Torsdag", "hours": "x - x", "weekend": false },
-          { "day": "Fredag",  "hours": "x - x", "weekend": false },
-          { "day": "Lørdag",  "hours": "x - x", "weekend": true  },
-          { "day": "Søndag",  "hours": "x - x", "weekend": true  }
+          { "day": "Mandag",  "hours": "08:00-18:00", "weekend": false },
+          { "day": "Tirsdag", "hours": "08:00-18:00", "weekend": false },
+          { "day": "Onsdag",  "hours": "08:00-18:00", "weekend": false },
+          { "day": "Torsdag", "hours": "08:00-18:00", "weekend": false },
+          { "day": "Fredag",  "hours": "08:00-18:00", "weekend": false },
+          { "day": "Lørdag",  "hours": "10:00-17:00", "weekend": true  },
+          { "day": "Søndag",  "hours": "10:00-17:00", "weekend": true  }
   
       ]
     },
@@ -42,17 +42,17 @@
         {
           "icon": "☕",
           "title": "Kafé-området",
-          "description": "[description]"
+          "description": "[vi ligger nær sentrum av Oslo, med lett tilgang til kollektivtransport og gangavstand fra populære attraksjoner.]"
         },
         {
           "icon": "💻",
           "title": "Arbeidsområde",
-          "description": "[description]"
+          "description": "[vi tar gjerne imot grupper og arrangementer. Kontakt oss for å diskutere dine behov.]"
         },
         {
           "icon": "🪑",
           "title": "Utendørs servering",
-          "description": "[description]"
+          "description": "[vi har også utendørs sitteplasser tilgjengelig for de som ønsker å nyte kaffen sin i frisk luft.]"
         },
         {
           "icon": "♿",

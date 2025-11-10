@@ -50,26 +50,26 @@
       "members": [
         {
           "name": "[Caroline]",
-          "role": "[markedsfører]",
-          "description": "[Caroline er 16 år gammel og er ansvarlig for å komme opp med nye ideer på menyen hvor. Altså hva slags nye cafeer vi kan ha, hva vi kan improvisere med nettsiden og andre ting. Hun har vært en veldig viktig del for oss siden vi startet med hele selskapet vårt.]"
+          "role": "[kassemedarbeider]",
+          "description": "[Caroline er 20 år gammel og hun er jobber som kasse altså hun tar imot bestillinger og betjener kassen. Hun er veldig hyggelig og smilende og hun er en viktig del av teamet vårt.]"
         },
         {
           "name": "[Robert]",
-          "role": "[IT-ansvarlig]",
-          "description": "[Robert er 16 år gammel og han er ansvarlig for nettsiden vår. Han er ganske flink på å programmere og det er derfor vi ga han ansvaret for å bygge nettsiden. Han har gjort en veldig bra jobb med det, deretter er han en ganske viktig medlem av oss.]"
+          "role": "[Barista]",
+          "description": "[Robert er 22 år gammel og han er vår hovedbarista. Han har en lidenskap for kaffe og elsker å lage de perfekte koppene for kundene våre. Hans ferdigheter og entusiasme gjør ham til en uvurderlig del av teamet.]"
         },
         {
           "name": "[Kristian]",
-          "role": "   [Grafikker]",
-          "description": "[Kristian er 16 år gammel og han er ansvarlig for grafikken vår. Han er ganske flink på å lage grafikk og det er derfor vi ga han ansvaret for å lage all grafikken vår. Han har gjort en veldig bra jobb med det, deretter er han en ganske viktig medlem av oss.]"
+          "role": "   []",
+          "description": "[kristian er 19 år gammel og er vår servitrise. han sørger for at kundene våre har en flott opplevelse ved å tilby utmerket service og oppmerksomhet på detaljer. hans vennlige natur gjør ham til en favoritt blant gjestene våre.]"
         }
       ]
     },
     "mission": {
       "title": "Vårt Oppdrag",
       "paragraphs": [
-        "[Første avsnitt om kaféens oppdrag og mål.]",
-        "[Andre avsnitt om hvordan kaféen jobber for å oppnå dette.]"
+        "[vårt oppdrag er å tilby enestående kaffe og bakevarer i et innbydende miljø hvor alle føler seg velkomne. Vi streber etter å skape en plass hvor folk kan koble av, jobbe eller tilbringe tid med venner og familie mens de nyter våre produkter av høy kvalitet.]",
+        "[vi er forpliktet til bærekraftige praksiser og støtter lokale leverandører for å sikre at vi gir tilbake til samfunnet vårt samtidig som vi opprettholder de høyeste standardene for kvalitet og service.]"
       ]
     },
     "footer": {
