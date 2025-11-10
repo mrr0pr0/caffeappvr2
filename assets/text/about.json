@@ -62,16 +62,17 @@
           "name": "[Kristian]",
           "role": "   [Grafikker]",
           "description": "[Kristian er 16 år gammel og han er ansvarlig for grafikken vår. Han er ganske flink på å lage grafikk og det er derfor vi ga han ansvaret for å lage all grafikken vår. Han har gjort en veldig bra jobb med det, deretter er han en ganske viktig medlem av oss.]"
+
         },
         {
-          "name": "[]",
-          "role": "[]",
-          "description": "[]"
+          "name": "[Kyrre ]",
+          "role": "[kokk]",
+          "description": "[Kyrre er 19 år gammel og han er vår kokk. Han lager all maten vår med stor omsorg og oppmerksomhet på detaljer. Hans kulinariske ferdigheter og kreativitet gjør ham til en verdifull del av teamet vårt.]"
         },
         {
-          "name": "[]",
-          "role": "[]",
-          "description": "[]"
+          "name": "[name]",
+          "role": "[role]",
+          "description": "[description]"
         }
       ]
     },
