@@ -74,36 +74,35 @@
     "footer": {
       "sections": [
         {
-          "title": "[finn oss på sosiale medier]",
+          "title": "navigasjon",
           "links": [
-            { "text": "[Snapchat]", "url": "[URL]" },
-            { "text": "[Instagram]", "url": "[URL]" },
-            { "text": "[Facebook]", "url": "[URL]" },
-            { "text": "[TikTok]", "url": "[URL]" },
-            { "text": "[Tiktok]", "url": "[URL]" }
+            { "text": "Om oss", "url": "om-oss.html" },
+            { "text": "Sted", "url": "sted.html" },
+            { "text": "Kontakt", "url": "kontakt.html" }
           ]
         },
         {
-          "title": "[Footer-seksjon 2 tittel]",
+          "title": "finn oss på sosiale medier",
           "links": [
-            { "text": "[slettt]", "url": "[URL]" },
-            { "text": "[Lenketekst]", "url": "[URL]" },
-            { "text": "[Lenketekst]", "url": "[URL]" }
+            { "text": "Snapchat", "url": "https://www.snapchat.com/add/caffeno" },
+            { "text": "Instagram", "url": "https://www.instagram.com/caffeno/" },
+            { "text": "Facebook", "url": "https://www.facebook.com/caffeno" },
+            { "text": "TikTok", "url": "https://www.tiktok.com/@caffeno" }
           ]
         },
         {
-          "title": "[kontaktinformasjon]",
+          "title": "kontaktinformasjon",
           "links": [
-            { "text": "[Telefonnummer:+47 123 45 678]", "url": "[Tel-link]" },
-            { "text": "[E-postadresse: post@caffe.no]", "url": "[Mailto-link]" },
-            { "text": "[Fysisk adresse]", "url": "[URL]" }
+            { "text": "Telefon: +47 12 34 56 78", "url": "tel:+4712345678" },
+            { "text": "E‑post: post@caffe.no", "url": "mailto:post@caffe.no" },
+            { "text": "Adresse", "url": "https://maps.google.com/?q=Kaffegata+1,+0123+Oslo" }
           ]
         },
         {
-          "title": "[åpningstider]",
+          "title": "åpningstider",
           "links": [
-            { "text": "[Man-Fre: 07:00-20:00]", "url": "[URL]" },
-            { "text": "[Lør-Søn: 08:00-18:00]", "url": "[URL]" }
+            { "text": "Man–Fre: 07:00–20:00", "url": "#" },
+            { "text": "Lør–Søn: 08:00–18:00", "url": "#" }
           ]
         }
       ],
