@@ -11,13 +11,13 @@
     },
     "hero": {
       "title": "Om Oss",
-      "subtitle": "[Undertekst med beskrivelse av kaféen]"
+      "subtitle": "[vi er en koselig kafé som tilbyr kvalitetskaffe og ferske bakevarer i hjertet av byen vår. Vårt mål er å skape et varmt og innbydende miljø hvor kunder kan nyte deilige drikker og mat mens de slapper av eller jobber.]"
     },
     "story": {
       "title": "Vår Historie",
       "paragraphs": [
-        "[Første avsnitt om kaféens grunnleggelse og bakgrunn.]",
-        "[Andre avsnitt om kaféens vekst og utvikling over tid.]"
+        "[vi var en gruppe unge studenter som delte en lidenskap for kaffe og fellesskap. Vi startet denne kaféen med en visjon om å skape et sted hvor folk kunne komme sammen, dele historier og nyte kvalitetskaffe laget med omsorg.]",
+        "[Gjennom årene har vi vokst og utviklet oss og fortsatt å fokusere på det som betyr mest for oss: våre kunder og kvaliteten på produktene våre. Vi er stolte av å være en del av lokalsamfunnet og ser frem til mange flere år med å servere dere.]"
       ]
     },
     "values": {
@@ -49,19 +49,19 @@
       "title": "Møt Teamet",
       "members": [
         {
-          "name": "[Navn]",
-          "role": "[Rolle]",
-          "description": "[Kort biografi eller beskrivelse]"
+          "name": "[Caroline]",
+          "role": "[markedsfører]",
+          "description": "[Caroline er 16 år gammel og er ansvarlig for å komme opp med nye ideer på menyen hvor. Altså hva slags nye cafeer vi kan ha, hva vi kan improvisere med nettsiden og andre ting. Hun har vært en veldig viktig del for oss siden vi startet med hele selskapet vårt.]"
         },
         {
-          "name": "[Navn]",
-          "role": "[Rolle]",
-          "description": "[Kort biografi eller beskrivelse]"
+          "name": "[Robert]",
+          "role": "[IT-ansvarlig]",
+          "description": "[Robert er 16 år gammel og han er ansvarlig for nettsiden vår. Han er ganske flink på å programmere og det er derfor vi ga han ansvaret for å bygge nettsiden. Han har gjort en veldig bra jobb med det, deretter er han en ganske viktig medlem av oss.]"
         },
         {
-          "name": "[Navn]",
-          "role": "   [Rolle]",
-          "description": "[Kort biografi eller beskrivelse]"
+          "name": "[Kristian]",
+          "role": "   [Grafikker]",
+          "description": "[Kristian er 16 år gammel og han er ansvarlig for grafikken vår. Han er ganske flink på å lage grafikk og det er derfor vi ga han ansvaret for å lage all grafikken vår. Han har gjort en veldig bra jobb med det, deretter er han en ganske viktig medlem av oss.]"
         }
       ]
     },

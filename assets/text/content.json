@@ -94,16 +94,16 @@
         {
           "title": "[kontaktinformasjon]",
           "links": [
-            { "text": "[Telefonnummer]", "url": "[Tel-link]" },
-            { "text": "[E-postadresse]", "url": "[Mailto-link]" },
+            { "text": "[Telefonnummer:+47 123 45 678]", "url": "[Tel-link]" },
+            { "text": "[E-postadresse: post@caffe.no]", "url": "[Mailto-link]" },
             { "text": "[Fysisk adresse]", "url": "[URL]" }
           ]
         },
         {
-          "title": "[Footer-seksjon 4 tittel - åpningstider]",
+          "title": "[åpningstider]",
           "links": [
-            { "text": "[Ukedager og tider]", "url": "[URL]" },
-            { "text": "[Helgedager og tider]", "url": "[URL]" }
+            { "text": "[Man-Fre: 07:00-20:00]", "url": "[URL]" },
+            { "text": "[Lør-Søn: 08:00-18:00]", "url": "[URL]" }
           ]
         }
       ],
