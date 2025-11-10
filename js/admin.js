@@ -1,13 +1,12 @@
-import { supabase } from '../lib/supabaseClient.js';
+import { initSupabase } from '../lib/supabaseClient.js';
+
+// Initialize Supabase
+let supabase = null;
 
 // DOM Elements
 const loginScreen = document.getElementById('login-screen');
-const registerScreen = document.getElementById('register-screen');
 const adminDashboard = document.getElementById('admin-dashboard');
 const loginForm = document.getElementById('login-form');
-const registerForm = document.getElementById('register-form');
-const showRegisterBtn = document.getElementById('show-register');
-const backToLoginBtn = document.getElementById('back-to-login');
 const logoutBtn = document.getElementById('logout-btn');
 const userEmailSpan = document.getElementById('user-email');
 const jsonEditor = document.getElementById('json-editor');
@@ -17,8 +16,6 @@ const navBtns = document.querySelectorAll('.nav-btn');
 const currentFileTitle = document.getElementById('current-file-title');
 const saveStatus = document.getElementById('save-status');
 const loginError = document.getElementById('login-error');
-const registerError = document.getElementById('register-error');
-const registerSuccess = document.getElementById('register-success');
 
 let currentFile = 'content';
 let currentUser = null;
@@ -33,37 +30,33 @@ const fileNames = {
 
 // Initialize
 async function init() {
-    // Check if user is already logged in
-    const { data: { session } } = await supabase.auth.getSession();
-    
-    if (session) {
-        currentUser = session.user;
-        showDashboard();
-    } else {
+    try {
+        // Initialize Supabase client
+        supabase = initSupabase();
+        
+        // Check if user is already logged in
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        if (session) {
+            currentUser = session.user;
+            showDashboard();
+        } else {
+            loginScreen.style.display = 'flex';
+        }
+
+        // Setup event listeners
+        setupEventListeners();
+    } catch (error) {
+        console.error('Initialization error:', error);
+        loginError.textContent = 'Kunne ikke koble til Supabase. Sjekk nettverkstilkoblingen.';
+        loginError.classList.add('show');
         loginScreen.style.display = 'flex';
     }
-
-    // Setup event listeners
-    setupEventListeners();
 }
 
 function setupEventListeners() {
     // Login form
     loginForm.addEventListener('submit', handleLogin);
-    
-    // Register form
-    registerForm.addEventListener('submit', handleRegister);
-    
-    // Show/hide screens
-    showRegisterBtn.addEventListener('click', () => {
-        loginScreen.style.display = 'none';
-        registerScreen.style.display = 'flex';
-    });
-    
-    backToLoginBtn.addEventListener('click', () => {
-        registerScreen.style.display = 'none';
-        loginScreen.style.display = 'flex';
-    });
     
     // Logout
     logoutBtn.addEventListener('click', handleLogout);
@@ -104,64 +97,21 @@ async function handleLogin(e) {
         currentUser = data.user;
         showDashboard();
     } catch (error) {
-        const normalizedMessage = (error?.message || '').toLowerCase();
-        if (normalizedMessage.includes('invalid login credentials') || normalizedMessage.includes('password')) {
-            loginError.textContent = 'Feil passord. Sjekk passordet og prøv igjen.';
+        const errorMessage = (error?.message || '').toLowerCase();
+        
+        if (errorMessage.includes('invalid login credentials')) {
+            loginError.textContent = '❌ Bruker ikke funnet eller feil passord. Sjekk e-post og passord.';
+        } else if (errorMessage.includes('email not confirmed')) {
+            loginError.textContent = '❌ E-post er ikke bekreftet. Sjekk innboksen din.';
+        } else if (errorMessage.includes('user not found')) {
+            loginError.textContent = '❌ Bruker ikke funnet. Kontakt administrator for å få tilgang.';
+        } else if (errorMessage.includes('invalid password')) {
+            loginError.textContent = '❌ Feil passord. Prøv igjen.';
         } else {
-            loginError.textContent = 'Feil e-post eller passord. Prøv igjen.';
+            loginError.textContent = '❌ Kunne ikke logge inn: ' + error.message;
         }
         loginError.classList.add('show');
         console.error('Login error:', error);
-    }
-}
-
-async function handleRegister(e) {
-    e.preventDefault();
-    
-    const email = document.getElementById('reg-email').value;
-    const password = document.getElementById('reg-password').value;
-    const name = document.getElementById('reg-name').value;
-    
-    registerError.classList.remove('show');
-    registerSuccess.classList.remove('show');
-    registerError.textContent = '';
-    registerSuccess.textContent = '';
-    
-    if (password.length < 6) {
-        registerError.textContent = 'Passord må være minst 6 tegn.';
-        registerError.classList.add('show');
-        return;
-    }
-    
-    try {
-        const { data, error } = await supabase.auth.signUp({
-            email,
-            password,
-            options: {
-                data: {
-                    full_name: name
-                }
-            }
-        });
-        
-        if (error) throw error;
-        
-        registerSuccess.textContent = 'Registrering vellykket! Du kan nå logge inn.';
-        registerSuccess.classList.add('show');
-        
-        // Clear form
-        registerForm.reset();
-        
-        // Switch to login after 2 seconds
-        setTimeout(() => {
-            registerScreen.style.display = 'none';
-            loginScreen.style.display = 'flex';
-        }, 2000);
-        
-    } catch (error) {
-        registerError.textContent = 'Registrering feilet: ' + error.message;
-        registerError.classList.add('show');
-        console.error('Register error:', error);
     }
 }
 
@@ -179,7 +129,6 @@ async function handleLogout() {
 // Dashboard functions
 function showDashboard() {
     loginScreen.style.display = 'none';
-    registerScreen.style.display = 'none';
     adminDashboard.style.display = 'block';
     
     userEmailSpan.textContent = currentUser.email;
