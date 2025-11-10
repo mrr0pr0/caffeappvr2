@@ -217,4 +217,6 @@ After successful deployment:
 
 ---
 
+**note** all of the MD file are writen by Cosur AI and upptaded:S
+
 **Note**: Keep your Supabase credentials secure and never commit them to public repositories.
