@@ -26,7 +26,7 @@
         {
           "icon": "☕",
           "title": "Kvalitet",
-          "description": "[description]"
+          "description": "[vi satser på å tilby produkter av høy kvalitet laget med de beste ingrediensene. Vi støtter lokale leverandører forårsaker. Vi er forpliktet til bærekraftige praksiser og miljøvennlige valg.]"
         },
         {
           "icon": "🌱",
@@ -70,9 +70,9 @@
           "description": "[Kyrre er 19 år gammel og han er vår kokk. Han lager all maten vår med stor omsorg og oppmerksomhet på detaljer. Hans kulinariske ferdigheter og kreativitet gjør ham til en verdifull del av teamet vårt.]"
         },
         {
-          "name": "[name]",
-          "role": "[role]",
-          "description": "[description]"
+          "name": "[Johan]",
+          "role": "[Oppvaskhjelp]",
+          "description": "[Oppvaskhjelpen vår Johan er 18 år gammel og han sørger for at alt kjøkkenutstyret vårt er rent og klart til bruk. Hans harde arbeid og pålitelighet gjør ham til en viktig del av teamet vårt.]"
         }
       ]
     },
