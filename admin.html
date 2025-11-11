@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Caffè</title>
     <link rel="stylesheet" href="./css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <div id="app">
@@ -26,39 +27,9 @@
                     <div id="login-error" class="error-message"></div>
                 </form>
                 <div class="info-box">
-                    <p><strong>Første gang?</strong></p>
-                    <p>Registrer en admin-bruker ved å bruke registreringsskjemaet nedenfor.</p>
-                    <button id="show-register" class="btn-secondary">Registrer Admin</button>
+                    <p><strong>Trenger du tilgang?</strong></p>
+                    <p>Kontakt administrator for å få opprettet en admin-bruker i Supabase.</p>
                 </div>
-                <div style="margin-top: 20px; text-align: center;">
-                    <a href="./index.html" class="btn-secondary" style="text-decoration: none; display: inline-block;">← Tilbake til hovedside</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Register Screen -->
-        <div id="register-screen" class="login-container" style="display: none;">
-            <div class="login-box">
-                <h1>👤 Registrer Admin</h1>
-                <p>Opprett en ny admin-bruker</p>
-                <form id="register-form">
-                    <div class="form-group">
-                        <label for="reg-email">E-post</label>
-                        <input type="email" id="reg-email" required placeholder="admin@caffe.no">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-password">Passord</label>
-                        <input type="password" id="reg-password" required placeholder="Minst 6 tegn">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-name">Fullt navn</label>
-                        <input type="text" id="reg-name" required placeholder="Ditt navn">
-                    </div>
-                    <button type="submit" class="btn-primary">Registrer</button>
-                    <button type="button" id="back-to-login" class="btn-secondary">Tilbake til innlogging</button>
-                    <div id="register-error" class="error-message"></div>
-                    <div id="register-success" class="success-message"></div>
-                </form>
                 <div style="margin-top: 20px; text-align: center;">
                     <a href="./index.html" class="btn-secondary" style="text-decoration: none; display: inline-block;">← Tilbake til hovedside</a>
                 </div>

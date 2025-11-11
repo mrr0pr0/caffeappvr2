@@ -272,7 +272,7 @@
     to { transform: rotate(360deg); }
 }
 
-/* Category icons */
+/* Dynamic category icons based on data-category attribute */
 .menu-category-title::before {
     content: '';
     display: inline-block;
@@ -283,19 +283,32 @@
     font-size: 28px;
 }
 
-.menu-category:nth-child(1) .menu-category-title::before {
+.menu-category-title[data-category="Kaffe"]::before {
     content: '☕';
 }
 
-.menu-category:nth-child(2) .menu-category-title::before {
+.menu-category-title[data-category="Mat"]::before {
     content: '🍽️';
 }
 
-.menu-category:nth-child(3) .menu-category-title::before {
+.menu-category-title[data-category="Bakst"]::before {
     content: '🥐';
 }
 
-.menu-category:nth-child(4) .menu-category-title::before {
+.menu-category-title[data-category="Drikke"]::before {
+    content: '🥤';
+}
+
+.menu-category-title[data-category="Dessert"]::before {
+    content: '🍰';
+}
+
+.menu-category-title[data-category="Annet"]::before {
+    content: '✨';
+}
+
+/* Default icon for any other categories */
+.menu-category-title:not([data-category="Kaffe"]):not([data-category="Mat"]):not([data-category="Bakst"]):not([data-category="Drikke"]):not([data-category="Dessert"]):not([data-category="Annet"])::before {
     content: '✨';
 }
 

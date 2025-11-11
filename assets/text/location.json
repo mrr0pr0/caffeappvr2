@@ -1,168 +1,168 @@
 {
-    "announcement": "[Velkomstmelding med åpningstider]",
-    "nav": {
-      "logo": "Caffè",
-      "home": "Hjem",
-      "menu": "Meny",
-      "about": "Om Oss",
-      "location": "Sted",
-      "contact": "Kontakt",
-      "bookTable": "Bestill Bord"
-    },
-    "hero": {
-      "title": "Vårt Sted",
-      "subtitle": "[Undertekst med beskrivelse av kaféen]"
-    },
-    "address": {
-      "title": "📍 Adresse",
-      "name": "Caffè",
-      "street": "[address]",
-      "city": "[city]",
-      "phone": "+47 123 45 678",
-      "phoneUrl": "tel:+4712345678",
-      "email": "post@caffe.no",
-      "emailUrl": "mailto:post@caffe.no"
-    },
-    "hours": {
-      "title": "🕐 Åpningstider",
-      "schedule": [
-          { "day": "Mandag",  "hours": "08:00-18:00", "weekend": false },
-          { "day": "Tirsdag", "hours": "08:00-18:00", "weekend": false },
-          { "day": "Onsdag",  "hours": "08:00-18:00", "weekend": false },
-          { "day": "Torsdag", "hours": "08:00-18:00", "weekend": false },
-          { "day": "Fredag",  "hours": "08:00-18:00", "weekend": false },
-          { "day": "Lørdag",  "hours": "10:00-17:00", "weekend": true  },
-          { "day": "Søndag",  "hours": "10:00-17:00", "weekend": true  }
-  
-      ]
-    },
-    "features": {
-      "title": "🏪 Våre Lokal",
-      "items": [
-        {
-          "icon": "☕",
-          "title": "Kafé-området",
-          "description": "[vi ligger nær sentrum av Oslo, med lett tilgang til kollektivtransport og gangavstand fra populære attraksjoner.]"
-        },
-        {
-          "icon": "💻",
-          "title": "Arbeidsområde",
-          "description": "[vi tar gjerne imot grupper og arrangementer. Kontakt oss for å diskutere dine behov.]"
-        },
-        {
-          "icon": "🪑",
-          "title": "Utendørs servering",
-          "description": "[vi har også utendørs sitteplasser tilgjengelig for de som ønsker å nyte kaffen sin i frisk luft.]"
-        },
-        {
-          "icon": "♿",
-          "title": "Tilgjengelig",
-          "description": "[description]"
-        }
-      ]
-      
-    },
-    "directions": {
-      "title": "🚇 Hvordan Komme Seg Hit",
-      "transport": [
-        {
-          "icon": "🚊",
-          "title": "Kollektivtransport",
-          "options": [
-            "T-bane: 5 min gange fra Oslo S",
-            "Buss: Stoppested \"Stortorvet\" (linje 30, 31, 34)",
-            "Trikk: Linje 11, 12, 13 til \"Stortorvet\""
-          ]
-        },
-        {
-          "icon": "🚗",
-          "title": "Bil",
-          "options": [
-            "Begrenset gateparkering i området",
-            "Nærmeste parkeringshus: Oslo City (200m)",
-            "P-hus Paleet (150m)"
-          ]
-        },
-        {
-          "icon": "🚴",
-          "title": "Sykkel",
-          "options": [
-            "Bysykkel-stativ rett utenfor",
-            "Sykkelparkering tilgjengelig",
-            "Trygg og sentral beliggenhet"
-          ]
-        }
-      ]
-    },
-    "nearby": {
-      "title": "🗺️ I Nærheten",
-      "places": [
-        {
-          "name": "Karl Johans gate",
-          "description": "2 min gange - Oslos hovedgate med shopping og severdigheter"
-        },
-        {
-          "name": "Slottet",
-          "description": "5 min gange - Det kongelige slott og slottsparken"
-        },
-        {
-          "name": "Nationaltheatret",
-          "description": "3 min gange - Norges nasjonalteater"
-        },
-        {
-          "name": "Aker Brygge",
-          "description": "10 min gange - Shopping, restauranter og havnepromenade"
-        }
-      ]
-    },
-    "map": {
-      "title": "Finn Oss på Kartet",
-      "name": "📍 [navn er på cafeen]",
-      "address": "[address], [city]",
-      "description": "[description]",
-      "accessibility": "Lett tilgjengelig med kollektivtransport, bil eller til fots",
-      "mapLink": "[Google Maps-lenke]",
-      "mapLinkText": "Åpne i Google Maps"
-    },
-    "footer": {
-      "sections": [
-        {
-          "title": "Caffè",
-          "links": [
-            { "text": "Om Oss", "url": "om-oss.html" },
-            { "text": "Vårt Sted", "url": "sted.html" },
-            { "text": "Kontakt", "url": "kontakt.html" }
-          ]
-        },
-        {
-          "title": "Meny",
-          "links": [
-            { "text": "Kaffe", "url": "index.html#menu" },
-            { "text": "Bakst", "url": "index.html#menu" },
-            { "text": "Lunsj", "url": "index.html#menu" }
-          ]
-        },
-        {
-          "title": "Kontakt",
-          "links": [
-            { "text": "+47 123 45 678", "url": "tel:+4712345678" },
-            { "text": "post@caffe.no", "url": "mailto:post@caffe.no" },
-            { "text": "[Fysisk adresse]", "url": "" }
-          ]
-        },
-        {
-          "title": "Åpningstider",
-          "links": [
-            { "text": "Man-Fre: 07:00-20:00", "url": "" },
-            { "text": "Lør-Søn: 08:00-18:00", "url": "" }
-          ]
-        }
-      ],
-      "newsletter": {
-        "title": "Hold deg oppdatert",
-        "description": "Meld deg på vårt nyhetsbrev for tilbud og nyheter",
-        "placeholder": "Din e-postadresse",
-        "button": "MELD DEG PÅ"
+  "announcement": "Cafen er i Oslo",
+  "nav": {
+    "logo": "Caffè",
+    "home": "Hjem",
+    "menu": "Meny",
+    "about": "Om Oss",
+    "location": "Sted",
+    "contact": "Kontakt",
+    "bookTable": "Bestill Bord"
+  },
+  "hero": {
+    "title": "Vårt Sted",
+    "subtitle": "Besøk oss på Torggata 11 i hjertet av Oslo sentrum"
+  },
+  "address": {
+    "title": "📍 Adresse",
+    "name": "Caffè",
+    "street": "Torggata 11",
+    "city": "0181 Oslo",
+    "phone": "+47 123 45 678",
+    "phoneUrl": "tel:+4712345678",
+    "email": "post@caffe.no",
+    "emailUrl": "mailto:post@caffe.no"
+  },
+  "hours": {
+    "title": "🕐 Åpningstider",
+    "schedule": [
+        { "day": "Mandag",  "hours": "08:00-18:00", "weekend": false },
+        { "day": "Tirsdag", "hours": "08:00-18:00", "weekend": false },
+        { "day": "Onsdag",  "hours": "08:00-18:00", "weekend": false },
+        { "day": "Torsdag", "hours": "08:00-18:00", "weekend": false },
+        { "day": "Fredag",  "hours": "08:00-18:00", "weekend": false },
+        { "day": "Lørdag",  "hours": "10:00-17:00", "weekend": true  },
+        { "day": "Søndag",  "hours": "10:00-17:00", "weekend": true  }
+
+    ]
+  },
+  "features": {
+    "title": "🏪 Våre Lokal",
+    "items": [
+      {
+        "icon": "☕",
+        "title": "Kafé-området",
+        "description": "Vi ligger sentralt på Torggata 11, midt i Oslo sentrum med lett tilgang til kollektivtransport og gangavstand fra populære attraksjoner."
+      },
+      {
+        "icon": "💻",
+        "title": "Arbeidsområde",
+        "description": "Vi tar gjerne imot grupper og arrangementer. Kontakt oss for å diskutere dine behov."
+      },
+      {
+        "icon": "🪑",
+        "title": "Utendørs servering",
+        "description": "Vi har også utendørs sitteplasser tilgjengelig for de som ønsker å nyte kaffen sin i frisk luft."
+      },
+      {
+        "icon": "♿",
+        "title": "Tilgjengelig",
+        "description": "Vårt lokale er tilgjengelig for alle med god plass og tilrettelagt inngang."
       }
+    ]
+    
+  },
+  "directions": {
+    "title": "🚇 Hvordan Komme Seg Hit",
+    "transport": [
+      {
+        "icon": "🚊",
+        "title": "Kollektivtransport",
+        "options": [
+          "T-bane: 3 min gange fra Grønland stasjon (linje 2, 3)",
+          "Buss: Stoppested \"Torggata\" (linje 31, 34, 54)",
+          "Trikk: Linje 11, 12, 13 til \"Hausmanns gate\" (2 min gange)"
+        ]
+      },
+      {
+        "icon": "🚗",
+        "title": "Bil",
+        "options": [
+          "Begrenset gateparkering på Torggata",
+          "Nærmeste parkeringshus: Grønland P-hus (300m)",
+          "Alternativt: Vestbanehallen P-hus (800m)"
+        ]
+      },
+      {
+        "icon": "🚴",
+        "title": "Sykkel",
+        "options": [
+          "Bysykkel-stativ på Youngstorget (100m unna)",
+          "Sykkelparkering tilgjengelig rett utenfor",
+          "Trygg og sentral beliggenhet på Torggata"
+        ]
+      }
+    ]
+  },
+  "nearby": {
+    "title": "🗺️ I Nærheten",
+    "places": [
+      {
+        "name": "Youngstorget",
+        "description": "2 min gange - Historisk torg med markeder og arrangementer"
+      },
+      {
+        "name": "Oslo Spektrum",
+        "description": "5 min gange - Konsert- og eventarena"
+      },
+      {
+        "name": "Grønland",
+        "description": "3 min gange - Flerkulturelt område med restauranter og butikker"
+      },
+      {
+        "name": "Karl Johans gate",
+        "description": "8 min gange - Oslos hovedgate med shopping og severdigheter"
+      }
+    ]
+  },
+  "map": {
+    "title": "Finn Oss på Kartet",
+    "name": "📍 Caffè",
+    "address": "Torggata 11, 0181 Oslo",
+    "description": "Vi holder til på Torggata 11, midt i Oslo sentrum. Lett tilgjengelig med kollektivtransport, bil eller til fots.",
+    "accessibility": "Lett tilgjengelig med kollektivtransport, bil eller til fots",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Torggata+11,+0181+Oslo",
+    "mapLinkText": "Åpne i Google Maps"
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "Caffè",
+        "links": [
+          { "text": "Om Oss", "url": "om-oss.html" },
+          { "text": "Vårt Sted", "url": "sted.html" },
+          { "text": "Kontakt", "url": "kontakt.html" }
+        ]
+      },
+      {
+        "title": "Meny",
+        "links": [
+          { "text": "Kaffe", "url": "index.html#menu" },
+          { "text": "Bakst", "url": "index.html#menu" },
+          { "text": "Lunsj", "url": "index.html#menu" }
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "links": [
+          { "text": "+47 123 45 678", "url": "tel:+4712345678" },
+          { "text": "post@caffe.no", "url": "mailto:post@caffe.no" },
+          { "text": "Torggata 11, 0181 Oslo", "url": "https://www.google.com/maps/search/?api=1&query=Torggata+11,+0181+Oslo" }
+        ]
+      },
+      {
+        "title": "Åpningstider",
+        "links": [
+          { "text": "Man-Fre: 08:00-18:00", "url": "" },
+          { "text": "Lør-Søn: 10:00-17:00", "url": "" }
+        ]
+      }
+    ],
+    "newsletter": {
+      "title": "Hold deg oppdatert",
+      "description": "Meld deg på vårt nyhetsbrev for tilbud og nyheter",
+      "placeholder": "Din e-postadresse",
+      "button": "MELD DEG PÅ"
     }
   }
+}

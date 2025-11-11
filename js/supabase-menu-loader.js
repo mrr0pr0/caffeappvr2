@@ -66,6 +66,8 @@ class SupabaseMenuLoader {
             if (item.category === 'Kaffe') icon = '☕';
             else if (item.category === 'Bakst') icon = '🥐';
             else if (item.category === 'Mat') icon = '🍽️';
+            else if (item.category === 'desser') icon = '🍰';
+            else if (item.category === 'Frokost') icon = '🥚';
             
             imageContainer.innerHTML = `<div class="menu-card-placeholder">${icon}</div>`;
         }

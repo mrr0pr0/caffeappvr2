@@ -48,6 +48,18 @@ class SupabaseMenuLoader {
         return map;
     }
 
+    getCategoryIcon(category) {
+        const icons = {
+            'Kaffe': '☕',
+            'Mat': '🍽️',
+            'Bakst': '🥐',
+            'Drikke': '🥤',
+            'Dessert': '🍰',
+            'Annet': '✨'
+        };
+        return icons[category] || '✨';
+    }
+
     createItemCard(item) {
         const card = document.createElement('div');
         card.className = 'menu-card';
@@ -63,16 +75,11 @@ class SupabaseMenuLoader {
             img.src = item.image_url;
             img.onerror = function() {
                 this.style.display = 'none';
-                imageContainer.innerHTML = '<div class="menu-card-placeholder">📷</div>';
-            };
+                imageContainer.innerHTML = `<div class="menu-card-placeholder">${this.getCategoryIcon(item.category)}</div>`;
+            }.bind(this);
             imageContainer.appendChild(img);
         } else {
-            // Use category-specific icons
-            let icon = '🍽️';
-            if (item.category === 'Kaffe') icon = '☕';
-            else if (item.category === 'Bakst') icon = '🥐';
-            else if (item.category === 'Mat') icon = '🍽️';
-            
+            const icon = this.getCategoryIcon(item.category);
             imageContainer.innerHTML = `<div class="menu-card-placeholder">${icon}</div>`;
         }
 
@@ -118,30 +125,49 @@ class SupabaseMenuLoader {
         }
 
         const byCategory = this.groupByCategory(items);
-        const categoryOrder = ['Kaffe', 'Mat', 'Bakst', 'Annet'];
-
-        categoryOrder.forEach(categoryName => {
-            if (byCategory.has(categoryName)) {
-                const items = byCategory.get(categoryName);
-                const section = document.createElement('div');
-                section.className = 'menu-category';
-
-                const h3 = document.createElement('h3');
-                h3.className = 'menu-category-title';
-                h3.textContent = categoryName;
-
-                const itemsWrap = document.createElement('div');
-                itemsWrap.className = 'menu-items-grid';
-
-                // Items are already sorted by sort_order and name from the query
-                items.forEach(item => {
-                    itemsWrap.appendChild(this.createItemCard(item));
-                });
-
-                section.appendChild(h3);
-                section.appendChild(itemsWrap);
-                container.appendChild(section);
+        
+        // Get all categories dynamically and sort them
+        // Priority order: Kaffe, Mat, Bakst, then alphabetically
+        const priorityOrder = ['Kaffe', 'Mat', 'Bakst'];
+        const allCategories = Array.from(byCategory.keys());
+        
+        const sortedCategories = allCategories.sort((a, b) => {
+            const aIndex = priorityOrder.indexOf(a);
+            const bIndex = priorityOrder.indexOf(b);
+            
+            // If both are in priority list, sort by priority
+            if (aIndex !== -1 && bIndex !== -1) {
+                return aIndex - bIndex;
             }
+            // If only a is in priority, a comes first
+            if (aIndex !== -1) return -1;
+            // If only b is in priority, b comes first
+            if (bIndex !== -1) return 1;
+            // Otherwise sort alphabetically
+            return a.localeCompare(b, 'no');
+        });
+
+        sortedCategories.forEach(categoryName => {
+            const items = byCategory.get(categoryName);
+            const section = document.createElement('div');
+            section.className = 'menu-category';
+
+            const h3 = document.createElement('h3');
+            h3.className = 'menu-category-title';
+            h3.setAttribute('data-category', categoryName);
+            h3.textContent = categoryName;
+
+            const itemsWrap = document.createElement('div');
+            itemsWrap.className = 'menu-items-grid';
+
+            // Items are already sorted by sort_order and name from the query
+            items.forEach(item => {
+                itemsWrap.appendChild(this.createItemCard(item));
+            });
+
+            section.appendChild(h3);
+            section.appendChild(itemsWrap);
+            container.appendChild(section);
         });
     }
 }
