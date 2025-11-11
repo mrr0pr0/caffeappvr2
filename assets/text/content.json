@@ -1,116 +1,116 @@
 {
-    "announcement": "[Velkomstmelding med åpningstider]",
-    "nav": {
-      "logo": "[Kaffe Aroma/logo]",
-      "home": "hjem",
-      "menu": "meny",
-      "about": "oss-side",
-      "location": "stedsinformasjon",
-      "contact": "kontaktinformasjon",
-      "bookTable": "bordbestilling"
+  "announcement": "Cafen er i Oslo",
+  "nav": {
+    "logo": "Kaffe Aroma/logo",
+    "home": "hjem",
+    "menu": "meny",
+    "about": "oss-side",
+    "location": "stedsinformasjon",
+    "contact": "kontaktinformasjon",
+    "bookTable": "bordbestilling"
+  },
+  "hero": {
+    "title": "Velkommen til Kaffe Aroma",
+    "subtitle": "Din lokale kafé for kvalitetskaffe og ferske bakevarer",
+    "cta": "kanpp for meny"
+  },
+  "categories": [
+    {
+      "title": "Kaffe Meny",
+      "description": "her finner du vår caffe meny",
+      "link": "trykk for å see meny"
     },
-    "hero": {
-      "title": "[Velkommen til Kaffe Aroma]",
-      "subtitle": "[Din lokale kafé for kvalitetskaffe og ferske bakevarer]",
-      "cta": "kanpp for meny"
+    {
+      "title": "Mat Meny",
+      "description": "her finner du vår mat meny ",
+      "link": "trykk for å see meny"
     },
-    "categories": [
-      {
-        "title": "[Kaffe Meny]",
-        "description": "[her finner du vår caffe meny]",
-        "link": "[Lenketekst til kategori 1]"
-      },
-      {
-        "title": "[Mat Meny]",
-        "description": "[her finner du vår mat meny ]",
-        "link": "[Lenketekst til kategori 2]"
-      },
-      {
-        "title": "[Om Oss]",
-        "description": "[her kan du lese om oss]",
-        "link": "[Lenketekst til kategori 3]"
-      }
-    ],
+    {
+      "title": "Om Oss",
+      "description": "her kan du lese om oss",
+      "link": "trykk for å om oss"
+    }
+  ],
+
   
-    
-    "menu": {
-      "title": "[mest populære produkter]",
-      "subtitle": "[her kan du finne våre mest populære produkter]",
-      "categories": {
-        "coffee": {
-          "title": "[Frokost]",
-          "items": [
-            { "name": "[Surdeigsrundstykke Ost & Kalkunskinke]", "price": "[79.90kr]" },
-            { "name": "[Surdeigsrundstykke Tomat & Avokado]", "price": "[79.90kr]" },
-            { "name": "[Yoghurt Jordbær]", "price": "[39.90kr]" },
-            { "name": "[Yoghurt Agave]", "price": "[39.90kr]" }
-          ]
-        },
-        "bakery": {
-          "title": "[bakst/deserter]",
-          "items": [
-            { "name": "[Sjokoladebolle Kokos]", "price": "[39.90kr]" },
-            { "name": "[Focaccia Salami & Brie]", "price": "[89.90kr]" },
-            { "name": "[Triple Chocolade Crumb]", "price": "[49.90kr]" },
-            { "name": "[Tiramisu]", "price": "[49.90kr]" }
-          ]
-        },
-        "lunch": {
-          "title": "[lunsj]",
-          "items": [
-            { "name": "[Toast Egg & Bacon]", "price": "[69.90kr]" },
-            { "name": "[Salat Bowl Cæsar Kylling]", "price": "[79.90kr]" },
-            { "name": "[Focaccia Pesto & Mozzarella]", "price": "[89.90kr]" },
-            { "name": "[Focaccia Kylling & Mozzarella]", "price": "[89.90kr]" }
-          ]
-        }
-      }
-    },
-    "cta": {
-      "title": "[Call-to-action overskrift]",
-      "description": "[Beskrivelse som oppfordrer til besøk]",
-      "button": "[Handlingsknapp]"
-    },
-    "footer": {
-      "sections": [
-        {
-          "title": "navigasjon",
-          "links": [
-            { "text": "Om oss", "url": "om-oss.html" },
-            { "text": "Sted", "url": "sted.html" },
-            { "text": "Kontakt", "url": "kontakt.html" }
-          ]
-        },
-        {
-          "title": "finn oss på sosiale medier",
-          "links": [
-            { "text": "Snapchat", "url": "https://www.snapchat.com/add/caffeno" },
-            { "text": "Instagram", "url": "https://www.instagram.com/caffeno/" },
-            { "text": "Facebook", "url": "https://www.facebook.com/caffeno" },
-            { "text": "TikTok", "url": "https://www.tiktok.com/@caffeno" }
-          ]
-        },
-        {
-          "title": "kontaktinformasjon",
-          "links": [
-            { "text": "Telefon: +47 12 34 56 78", "url": "tel:+4712345678" },
-            { "text": "E‑post: post@caffe.no", "url": "mailto:post@caffe.no" },
-            { "text": "Adresse", "url": "https://maps.google.com/?q=Kaffegata+1,+0123+Oslo" }
-          ]
-        },
-        {
-          "title": "åpningstider",
-          "links": [
-            { "text": "Man–Fre: 07:00–20:00", "url": "#" },
-            { "text": "Lør–Søn: 08:00–18:00", "url": "#" }
-          ]
-        }
-      ],
-      "newsletter": {
-        "title": "[Nyhetsbrev-overskrift]",
-        "description": "[Nyhetsbrev-beskrivelse]",
-        "placeholder": "[Placeholder-tekst for e-postfelt]",
-        "button": "[Påmeldingsknapp]"
+  "menu": {
+    "title": "mest populære produkter",
+    "subtitle": "her kan du finne våre mest populære produkter",
+    "categories": {
+      "coffee": {
+        "title": "Frokost",
+        "items": [
+          { "name": "Surdeigsrundstykke Ost & Kalkunskinke", "price": "79.90kr" },
+          { "name": "Surdeigsrundstykke Tomat & Avokado", "price": "79.90kr" },
+          { "name": "Yoghurt Jordbær", "price": "39.90kr" },
+          { "name": "Yoghurt Agave", "price": "39.90kr" }
+        ]
+      },
+      "bakery": {
+        "title": "bakst/deserter",
+        "items": [
+          { "name": "Sjokoladebolle Kokos", "price": "39.90kr" },
+          { "name": "Focaccia Salami & Brie", "price": "89.90kr" },
+          { "name": "Triple Chocolade Crumb", "price": "49.90kr" },
+          { "name": "Tiramisu", "price": "49.90kr" }
+        ]
+      },
+      "lunch": {
+        "title": "lunsj",
+        "items": [
+          { "name": "Toast Egg & Bacon", "price": "69.90kr" },
+          { "name": "Salat Bowl Cæsar Kylling", "price": "79.90kr" },
+          { "name": "Focaccia Pesto & Mozzarella", "price": "89.90kr" },
+          { "name": "Focaccia Kylling & Mozzarella", "price": "89.90kr" }
+        ]
       }
     }
+  },
+  "cta": {
+    "title": "Bestill bord",
+    "description": "Trykk her og fyll ut om melding",
+    "button": "Trykk her"
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "navigasjon",
+        "links": [
+          { "text": "Om oss", "url": "om-oss.html" },
+          { "text": "Sted", "url": "sted.html" },
+          { "text": "Kontakt", "url": "kontakt.html" }
+        ]
+      },
+      {
+        "title": "finn oss på sosiale medier",
+        "links": [
+          { "text": "Snapchat", "url": "https://www.snapchat.com/add/caffeno" },
+          { "text": "Instagram", "url": "https://www.instagram.com/caffeno/" },
+          { "text": "Facebook", "url": "https://www.facebook.com/caffeno" },
+          { "text": "TikTok", "url": "https://www.tiktok.com/@caffeno" }
+        ]
+      },
+      {
+        "title": "kontaktinformasjon",
+        "links": [
+          { "text": "Telefon: +47 12 34 56 78", "url": "tel:+4712345678" },
+          { "text": "E‑post: post@caffe.no", "url": "mailto:post@caffe.no" },
+          { "text": "Adresse", "url": "https://maps.app.goo.gl/r67DCuhLY46zgi5V9" }
+        ]
+      },
+      {
+        "title": "åpningstider",
+        "links": [
+          { "text": "Man–Fre: 07:00–20:00", "url": "#" },
+          { "text": "Lør–Søn: 08:00–18:00", "url": "#" }
+        ]
+      }
+    ],
+    "newsletter": {
+      "title": "Nyhetsbrev",
+      "description": "Meld deg på vårt Nyhetsbrev",
+      "placeholder": "Skriv E-post",
+      "button": "Meld på"
+    }
   }
+}
