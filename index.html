@@ -1,191 +1,223 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffè - Velkommen</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Meta-informasjon for dokumentet -->
+    <meta charset="UTF-8"> <!-- Tegnsett for norske bokstaver -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design for mobile enheter -->
+    <title>Caffè - Velkommen</title> <!-- Tittel som vises i nettleser-fanen -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- Hovedstil for nettsiden -->
 </head>
 <body>
-    <!-- Announcement Bar -->
+    <!-- Kunngjøringsbar øverst på siden -->
     <div class="announcement-bar">Velkommen til Caffè – åpent hver dag 08–18</div>
 
-    <!-- Header -->
+    <!-- Hovednavigasjon og logo -->
     <header class="header">
         <div class="nav-container">
+            <!-- Logo som lenker til forsiden -->
             <a href="index.html" class="logo">Caffè</a>
+            <!-- Hovednavigasjon med menyelementer -->
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Hjem</a></li>
+                    <li><a href="index.html" class="active">Hjem</a></li> <!-- Aktiv side -->
                     <li><a href="meny.html">Meny</a></li>
                     <li><a href="om-oss.html">Om oss</a></li>
                     <li><a href="sted.html">Sted</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
+            <!-- Handlingsknapper i navigasjonen -->
             <div class="nav-actions">
                 <a href="kontakt.html">Kontakt oss</a>
+                <!-- Skjult admin-lenke for administratorer -->
                 <a href="admin.html" class="admin-link" style="margin-left: 10px; font-size: 12px; opacity: 0.7;">Admin</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero-seksjon med hovedbudskap -->
     <section class="hero">
-        <h1></h1>
-        <p></p>
-        <a href="#menu" class="cta-button"></a>
+        <h1></h1> <!-- Hovedtittel lastes dynamisk fra JSON -->
+        <p></p> <!-- Undertekst lastes dynamisk fra JSON -->
+        <a href="#menu" class="cta-button"></a> <!-- Call-to-action knapp lastes dynamisk -->
     </section>
 
-    <!-- Category Cards -->
+    <!-- Kategorikort som viser hovedkategorier -->
     <section class="category-section">
         <div class="category-grid">
+            <!-- Kaffekategori kort -->
             <div class="category-card">
-                <h3></h3>
-                <p></p>
-                <a href="meny.html?category=kaffe" class="category-link"></a>
+                <h3></h3> <!-- Kategoritittel lastes dynamisk -->
+                <p></p> <!-- Kategoribeskrivelse lastes dynamisk -->
+                <a href="meny.html?category=kaffe" class="category-link"></a> <!-- Lenke til kaffe-meny -->
             </div>
+            <!-- Matkategori kort -->
             <div class="category-card">
-                <h3></h3>
-                <p></p>
-                <a href="meny.html?category=mat" class="category-link"></a>
+                <h3></h3> <!-- Kategoritittel lastes dynamisk -->
+                <p></p> <!-- Kategoribeskrivelse lastes dynamisk -->
+                <a href="meny.html?category=mat" class="category-link"></a> <!-- Lenke til mat-meny -->
             </div>
+            <!-- Om oss kategori kort -->
             <div class="category-card">
-                <h3></h3>
-                <p></p>
-                <a href="om-oss.html" class="category-link"></a>
+                <h3></h3> <!-- Kategoritittel lastes dynamisk -->
+                <p></p> <!-- Kategoribeskrivelse lastes dynamisk -->
+                <a href="om-oss.html" class="category-link"></a> <!-- Lenke til om oss-siden -->
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
+    <!-- Meny-seksjon med utvalgte menyelementer -->
     <section class="menu-section" id="menu">
-        <h2 class="section-title"></h2>
-        <p class="section-subtitle"></p>
+        <h2 class="section-title"></h2> <!-- Seksjonstittel lastes dynamisk -->
+        <p class="section-subtitle"></p> <!-- Seksjonsbeskrivelse lastes dynamisk -->
         
+        <!-- Container for menykategorier -->
         <div class="menu-container">
+            <!-- Første menykategori -->
             <div class="menu-category">
-                <h3></h3>
+                <h3></h3> <!-- Kategorinavn lastes dynamisk -->
                 <div class="menu-items">
+                    <!-- Menyelement 1 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 2 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 3 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 4 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
                 </div>
             </div>
 
+            <!-- Andre menykategori -->
             <div class="menu-category">
-                <h3></h3>
+                <h3></h3> <!-- Kategorinavn lastes dynamisk -->
                 <div class="menu-items">
+                    <!-- Menyelement 1 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 2 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 3 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 4 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
                 </div>
             </div>
 
+            <!-- Tredje menykategori -->
             <div class="menu-category">
-                <h3></h3>
+                <h3></h3> <!-- Kategorinavn lastes dynamisk -->
                 <div class="menu-items">
+                    <!-- Menyelement 1 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 2 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 3 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
+                    <!-- Menyelement 4 -->
                     <div class="menu-item">
-                        <h4></h4>
-                        <div class="price"></div>
+                        <h4></h4> <!-- Produktnavn lastes dynamisk -->
+                        <div class="price"></div> <!-- Pris lastes dynamisk -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- App Section -->
+    <!-- App-seksjon med call-to-action -->
     <section class="app-section">
-        <h2></h2>
-        <p></p>
-        <a href="kontakt.html" class="cta-button"></a>
+        <h2></h2> <!-- Tittel lastes dynamisk fra JSON -->
+        <p></p> <!-- Beskrivelse lastes dynamisk fra JSON -->
+        <a href="kontakt.html" class="cta-button"></a> <!-- Handlingsknapp lastes dynamisk -->
     </section>
 
-    <!-- Footer -->
+    <!-- Footer med lenker og informasjon -->
     <footer class="footer">
         <div class="footer-content">
+            <!-- Navigasjonsseksjon i footer -->
             <div class="footer-section">
-                <h3></h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="om-oss.html"></a></li>
-                    <li><a href="sted.html"></a></li>
-                    <li><a href="kontakt.html"></a></li>
+                    <li><a href="om-oss.html"></a></li> <!-- Om oss lenke -->
+                    <li><a href="sted.html"></a></li> <!-- Sted lenke -->
+                    <li><a href="kontakt.html"></a></li> <!-- Kontakt lenke -->
                 </ul>
             </div>
+            <!-- Sosiale medier seksjon -->
             <div class="footer-section">
-                <h3></h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="https://www.snapchat.com/add/caffeno"></a></li>
-                    <li><a href="https://www.instagram.com/caffeno/"></a></li>
-                    <li><a href="https://www.facebook.com/caffeno"></a></li>
-                    <li><a href="https://www.tiktok.com/@caffeno"></a></li>
+                    <li><a href="https://www.snapchat.com/add/caffeno"></a></li> <!-- Snapchat lenke -->
+                    <li><a href="https://www.instagram.com/caffeno/"></a></li> <!-- Instagram lenke -->
+                    <li><a href="https://www.facebook.com/caffeno"></a></li> <!-- Facebook lenke -->
+                    <li><a href="https://www.tiktok.com/@caffeno"></a></li> <!-- TikTok lenke -->
                 </ul>
             </div>
+            <!-- Kontaktinformasjon seksjon -->
             <div class="footer-section">
-                <h3></h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="tel:+4712345678"></a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#70001f03043013111616155e1e1f"><span class="__cf_email__" data-cfemail="14647b67605477757272713a7a7b">[email&#160;protected]</span></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="tel:+4712345678"></a></li> <!-- Telefonnummer -->
+                    <li><a href="/cdn-cgi/l/email-protection#70001f03043013111616155e1e1f"><span class="__cf_email__" data-cfemail="14647b67605477757272713a7a7b">[email&#160;protected]</span></a></li> <!-- E-post adresse -->
+                    <li><a href="#"></a></li> <!-- Adresse informasjon -->
                 </ul>
             </div>
+            <!-- Åpningstider seksjon -->
             <div class="footer-section">
-                <h3></h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li></li> <!-- Åpningstider lastes dynamisk -->
+                    <li></li> <!-- Åpningstider lastes dynamisk -->
                 </ul>
             </div>
         </div>
         
+        <!-- Nyhetsbrev-seksjon -->
         <div class="newsletter">
-            <h3></h3>
-            <p></p>
+            <h3></h3> <!-- Nyhetsbrev tittel lastes dynamisk -->
+            <p></p> <!-- Nyhetsbrev beskrivelse lastes dynamisk -->
             <form class="newsletter-form">
-                <input type="email" placeholder="" required>
-                <button type="submit"></button>
+                <input type="email" placeholder="" required> <!-- E-post input felt -->
+                <button type="submit"></button> <!-- Send knapp -->
             </form>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="./js/content-loader-supabase.js"></script>
+    <!-- CloudFlare e-post dekoding script -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Hovedscript som laster innhold dynamisk fra Supabase -->
+    <script type="module" src="./js/content-loader-supabase.js"></script>
 </body>
 </html>

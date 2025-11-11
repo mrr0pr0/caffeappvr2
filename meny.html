@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffè - Meny</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/menu-styles.css">
-    <!-- Load Supabase from CDN -->
+    <!-- Meta-informasjon for meny-siden -->
+    <meta charset="UTF-8"> <!-- Tegnsett for norske bokstaver -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design -->
+    <title>Caffè - Meny</title> <!-- Tittel for meny-siden -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- Hovedstil -->
+    <link rel="stylesheet" href="./css/menu-styles.css"> <!-- Spesiell CSS for meny-siden -->
+    <!-- Last Supabase bibliotek fra CDN for database-tilkobling -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+    <!-- Kunngjøringsbar øverst på siden -->
     <div class="announcement-bar">Velkommen til Caffè – åpent hver dag 08–18</div>
 
+    <!-- Hovednavigasjon -->
     <header class="header">
         <div class="nav-container">
+            <!-- Logo som lenker til forsiden -->
             <a href="index.html" class="logo">Caffè</a>
+            <!-- Navigasjonsmeny -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="meny.html" class="active">Meny</a></li>
+                    <li><a href="meny.html" class="active">Meny</a></li> <!-- Aktiv side -->
                     <li><a href="om-oss.html">Om oss</a></li>
                     <li><a href="sted.html">Sted</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
+            <!-- Handlingsknapper -->
             <div class="nav-actions">
                 <a href="kontakt.html">Kontakt oss</a>
+                <!-- Skjult admin-lenke -->
                 <a href="admin.html" class="admin-link" style="margin-left: 10px; font-size: 12px; opacity: 0.7;">Admin</a>
             </div>
         </div>
     </header>
 
+    <!-- Hero-seksjon for meny-siden -->
     <section class="menu-hero">
-        <h1>Vår meny</h1>
-        <p>Direkte fra vårt kjøkken og kaffebar. Oppdatert med ferske ingredienser.</p>
+        <h1>Vår meny</h1> <!-- Hovedtittel -->
+        <p>Direkte fra vårt kjøkken og kaffebar. Oppdatert med ferske ingredienser.</p> <!-- Beskrivende tekst -->
     </section>
 
+    <!-- Hovedmeny-seksjon -->
     <section class="menu-section" id="menu">
-        <h2 class="section-title">Meny</h2>
-        <p class="section-subtitle">Utforsk vårt utvalg av kaffe, mat og bakverk</p>
+        <h2 class="section-title">Meny</h2> <!-- Seksjonstittel -->
+        <p class="section-subtitle">Utforsk vårt utvalg av kaffe, mat og bakverk</p> <!-- Undertekst -->
 
+        <!-- Container hvor meny-elementer lastes dynamisk -->
         <div id="menu-root" class="menu-container"></div>
 
+        <!-- Tom tilstand som vises hvis ingen menyelementer er tilgjengelige -->
         <div id="menu-empty" class="empty-state" style="display:none; text-align:center; padding:40px 0;">
             <p>Ingen menyelementer er tilgjengelige ennå.</p>
         </div>
 
+        <!-- Feilmelding som vises ved lasting-problemer -->
         <div id="menu-error" class="status-message error" style="display:none; text-align:center;"></div>
     </section>
 
+    <!-- Footer med informasjon og lenker -->
     <footer class="footer">
         <div class="footer-content">
+            <!-- Hovednavigasjon i footer -->
             <div class="footer-section">
                 <h3>Caffè</h3>
                 <ul>
@@ -59,22 +73,26 @@
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
+            <!-- Meny-kategorier i footer -->
             <div class="footer-section">
                 <h3>Meny</h3>
                 <ul>
-                    <li><a href="#menu">Kaffe</a></li>
-                    <li><a href="#menu">Mat</a></li>
-                    <li><a href="#menu">Bakverk</a></li>
+                    <li><a href="#menu">Kaffe</a></li> <!-- Lenke til kaffe-seksjon -->
+                    <li><a href="#menu">Mat</a></li> <!-- Lenke til mat-seksjon -->
+                    <li><a href="#menu">Bakverk</a></li> <!-- Lenke til bakverk-seksjon -->
                 </ul>
             </div>
+            <!-- Kontaktinformasjon i footer -->
             <div class="footer-section">
                 <h3>Kontakt</h3>
                 <ul>
-                    <li><a href="tel:+4712345678">+47 12 34 56 78</a></li>
+                    <li><a href="tel:+4712345678">+47 12 34 56 78</a></li> <!-- Telefonnummer -->
+                    <!-- E-post adresse med CloudFlare beskyttelse -->
                     <li><a href="/cdn-cgi/l/email-protection#4f272a260f2c2e29292a612120"><span class="__cf_email__" data-cfemail="a9c1ccc0e9cac8cfcfcc87c7c6">[email&#160;protected]</span></a></li>
-                    <li>Åpent alle dager</li>
+                    <li>Åpent alle dager</li> <!-- Åpningstider -->
                 </ul>
             </div>
+            <!-- Sosiale medier i footer -->
             <div class="footer-section">
                 <h3>Følg oss</h3>
                 <ul>
@@ -85,6 +103,9 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="./js/meny.js"></script>
+    <!-- CloudFlare e-post dekoding script -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Hovedscript for meny-funksjonalitet og Supabase-tilkobling -->
+    <script type="module" src="./js/meny.js"></script>
 </body>
 </html>

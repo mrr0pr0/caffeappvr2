@@ -1,80 +1,105 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Caffè</title>
-    <link rel="stylesheet" href="./css/admin.css">
+    <!-- Meta-informasjon for admin-panelet -->
+    <meta charset="UTF-8"> <!-- Tegnsett for norske bokstaver -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design -->
+    <title>Admin Panel - Caffè</title> <!-- Tittel for admin-siden -->
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Spesiell CSS for admin-panelet -->
+    <!-- Supabase JavaScript bibliotek fra CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+    <!-- Hovedcontainer for hele admin-applikasjonen -->
     <div id="app">
-        <!-- Login Screen -->
+        <!-- Innloggingsskjerm som vises først -->
         <div id="login-screen" class="login-container">
             <div class="login-box">
-                <h1>🔐 Admin Login</h1>
-                <p>Logg inn for å redigere innhold</p>
+                <h1>🔐 Admin Login</h1> <!-- Overskrift med ikon -->
+                <p>Logg inn for å redigere innhold</p> <!-- Forklarende tekst -->
+                <!-- Innloggingsskjema -->
                 <form id="login-form">
+                    <!-- E-post input gruppe -->
                     <div class="form-group">
                         <label for="email">E-post</label>
                         <input type="email" id="email" required placeholder="admin@caffe.no">
                     </div>
+                    <!-- Passord input gruppe -->
                     <div class="form-group">
                         <label for="password">Passord</label>
                         <input type="password" id="password" required placeholder="Ditt passord">
                     </div>
+                    <!-- Innloggingsknapp -->
                     <button type="submit" class="btn-primary">Logg Inn</button>
+                    <!-- Feilmelding som vises ved innloggingsproblemer -->
                     <div id="login-error" class="error-message"></div>
                 </form>
+                <!-- Informasjonsboks for nye brukere -->
                 <div class="info-box">
                     <p><strong>Trenger du tilgang?</strong></p>
                     <p>Kontakt administrator for å få opprettet en admin-bruker i Supabase.</p>
                 </div>
+                <!-- Lenke tilbake til hovedsiden -->
                 <div style="margin-top: 20px; text-align: center;">
                     <a href="./index.html" class="btn-secondary" style="text-decoration: none; display: inline-block;">← Tilbake til hovedside</a>
                 </div>
             </div>
         </div>
 
-        <!-- Admin Dashboard -->
+        <!-- Admin dashboard som vises etter innlogging -->
         <div id="admin-dashboard" style="display: none;">
+            <!-- Header for admin-panelet -->
             <header class="admin-header">
-                <h1>☕ Caffè Admin Panel</h1>
+                <h1>☕ Caffè Admin Panel</h1> <!-- Tittel med kaffe-ikon -->
+                <!-- Handlingsknapper i headeren -->
                 <div class="header-actions">
+                    <!-- Lenke tilbake til hovedsiden -->
                     <a href="./index.html" class="btn-secondary" style="text-decoration: none; margin-right: 10px;">← Tilbake til hovedside</a>
+                    <!-- Viser innlogget brukers e-post -->
                     <span id="user-email" class="user-info"></span>
+                    <!-- Utloggingsknapp -->
                     <button id="logout-btn" class="btn-secondary">Logg Ut</button>
                 </div>
             </header>
 
+            <!-- Navigasjon for å velge hvilken side som skal redigeres -->
             <nav class="admin-nav">
-                <button class="nav-btn active" data-file="content">Hovedside</button>
+                <button class="nav-btn active" data-file="content">Hovedside</button> <!-- Aktiv knapp for hovedsiden -->
                 <button class="nav-btn" data-file="about">Om Oss</button>
                 <button class="nav-btn" data-file="location">Sted</button>
                 <button class="nav-btn" data-file="contact-page">Kontakt</button>
             </nav>
 
+            <!-- Hovedinnhold i admin-panelet -->
             <main class="admin-content">
+                <!-- Header for innholdsredigering -->
                 <div class="content-header">
+                    <!-- Dynamisk tittel som viser hvilken fil som redigeres -->
                     <h2 id="current-file-title">Rediger Hovedside</h2>
+                    <!-- Handlingsknapper for lagring og oppdatering -->
                     <div class="action-buttons">
-                        <button id="save-btn" class="btn-success">💾 Lagre Endringer</button>
-                        <button id="reload-btn" class="btn-secondary">🔄 Last på nytt</button>
+                        <button id="save-btn" class="btn-success">💾 Lagre Endringer</button> <!-- Lagreknapp med ikon -->
+                        <button id="reload-btn" class="btn-secondary">🔄 Last på nytt</button> <!-- Oppdateringsknapp med ikon -->
                     </div>
                 </div>
                 
+                <!-- Container for JSON-editoren -->
                 <div id="editor-container">
+                    <!-- Informasjonsboks med advarsel -->
                     <div class="editor-info">
                         <p>⚠️ Vær forsiktig når du redigerer JSON. Ugyldig format kan ødelegge nettsiden.</p>
                     </div>
+                    <!-- Tekstområde for JSON-redigering -->
                     <textarea id="json-editor" spellcheck="false"></textarea>
                 </div>
 
+                <!-- Statusmelding som vises etter lagring eller feil -->
                 <div id="save-status" class="status-message"></div>
             </main>
         </div>
     </div>
 
+    <!-- Hovedscript for admin-funksjonalitet -->
     <script type="module" src="./js/admin.js"></script>
 </body>
 </html>
