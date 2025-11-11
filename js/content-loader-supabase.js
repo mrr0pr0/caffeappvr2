@@ -1,34 +1,34 @@
-// Cache for loaded content
+// gloale variabler
 const contentCache = {};
 let supabaseClient = null;
 let supabaseLoadAttempted = false;
 
-// Function to clear content cache (useful for development)
+// Funksjon for å tømme innholdscachen for raks editor av tekst
 function clearContentCache() {
     Object.keys(contentCache).forEach(key => delete contentCache[key]);
     console.log('Content cache cleared');
 }
 
-// Make it available globally for console access
+// lager det tilgjengelig globalt for konsoll tilgang
 window.clearContentCache = clearContentCache;
 
-// Function to reload content (clears cache and reloads)
+// funksjon for å laste innhold på nytt
 async function reloadContent() {
     clearContentCache();
     await loadContent();
     console.log('Content reloaded');
 }
 
-// Make it available globally for console access
+// gjør funksjonen tilgjengelig globalt for konsoll tilgang
 window.reloadContent = reloadContent;
 
-// Check if we should bypass cache (for development)
+// ser om det er nødvendig a laste innhold på nytt eller bypasse cache
 function shouldBypassCache() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.has('nocache') || urlParams.has('refresh');
 }
 
-// Check if we're in development mode (localhost or file:// protocol)
+// sjekker om vi er i utviklings modus (localhost eller file://)
 function isDevelopmentMode() {
     return window.location.hostname === 'localhost' || 
            window.location.hostname === '127.0.0.1' ||
@@ -36,41 +36,55 @@ function isDevelopmentMode() {
 }
 
 /**
- * Try to load Supabase client (lazy load)
+ * dynamisk import av Supabase klienten
+ * 
+ * hvis imorten mislykkes, returner null
+ * 
+ * @returns {Promise<SupabaseClient|null>} Supabase klienten eller null hvis ikke tilgjengelig
  */
 async function getSupabaseClient() {
+    // hvis vi allerede har prøvd å laste Supabase klienten, returner den lagrede verdien
     if (supabaseLoadAttempted) {
         return supabaseClient;
     }
-    
+
+    // marker at vi har prøvd å laste Supabase klienten
     supabaseLoadAttempted = true;
+
     try {
-        const supabaseModule = await import('../lib/supabaseClient.js');
-        supabaseClient = supabaseModule.supabase;
+        // dynamisk import av Supabase klienten
+        const { supabase } = await import('../lib/supabaseClient.js');
+        // lagre den importerte klienten
+        supabaseClient = supabase;
+        // returner klienten
         return supabaseClient;
     } catch (error) {
+        // hvis dynamisk import mislykkes, returner null
         console.log('Supabase client not available, will use local JSON files');
         return null;
     }
 }
 
 /**
- * Load content from Supabase or fallback to local JSON files
+ * laster innhold fra Supabase eller lokal fil med cache-busting
+ * 
+ * @param {string} filename - navnet på filen uten .json
+ * @returns {Promise<Object|null>} - innholdet som et objekt, eller null hvis lasting mislykkes
  */
 async function loadContentFromSupabase(filename) {
-    // Check cache first (unless bypassing cache)
+    // sjekk cache først med mindre vi skal bypasse cache
     if (!shouldBypassCache() && contentCache[filename]) {
         return contentCache[filename];
     }
     
-    // Clear cache for this file if bypassing cache
+    // hvis vi skal bypasse cache, fjern fra cache
     if (shouldBypassCache()) {
         delete contentCache[filename];
     }
     
-    // Try to load from Supabase first (if available)
-    // In development mode, prefer local files. You can also add ?useLocal=true to URL to force local files
-    // or ?useSupabase=true to force Supabase even in development
+    // sjekk om vi skal laste fra Supabase
+    // sjekk URL parametere og utviklingsmodus
+    // hvis useLocal er satt, eller vi er i utviklingsmodus uten useSupabase, bruk lokal fil
     const urlParams = new URLSearchParams(window.location.search);
     const useLocal = urlParams.has('useLocal') || (isDevelopmentMode() && !urlParams.has('useSupabase'));
     
@@ -94,13 +108,13 @@ async function loadContentFromSupabase(filename) {
         }
     }
     
-    // Fallback to local file with cache-busting
+    // laste fra lokal fil hvis Supabase ikke er tilgjengelig eller useLocal er satt
     try {
-        // Add cache-busting parameter to prevent browser caching
-        // Use timestamp when bypassing cache, or use a more stable version otherwise
+        // legg til cache-busting parameter
+        // bruk tidsstempel for nocache, eller sekund-basert versjon for refresh
         const cacheBuster = shouldBypassCache() ? `?t=${Date.now()}` : `?v=${Math.floor(Date.now() / 1000)}`;
         const response = await fetch(`./assets/text/${filename}.json${cacheBuster}`, {
-            cache: shouldBypassCache() ? 'no-cache' : 'no-store'  // Always bypass browser cache for JSON files
+            cache: shouldBypassCache() ? 'no-cache' : 'no-store'  // altid cache-busting for no-cache
         });
         if (!response.ok) {
             throw new Error(`Failed to fetch ${filename}.json: ${response.status}`);
@@ -115,11 +129,13 @@ async function loadContentFromSupabase(filename) {
 }
 
 /**
- * Get the appropriate content file based on current page
+ * bestemmer hvilken innholdsfil som skal lastes basert på gjeldende side
+ * 
+ * @returns {string} navnet på innholdsfilen uten .json
  */
 function getContentFile() {
     const path = window.location.pathname || window.location.href;
-    const currentPage = path.split('/').pop().split('?')[0]; // Remove query string if present
+    const currentPage = path.split('/').pop().split('?')[0]; // fjern eventuelle URL parametere
     
     console.log('Current page detected:', currentPage);
     
@@ -139,6 +155,10 @@ function getContentFile() {
 
 /**
  * Main content loader function
+ * 
+ * Loads content from Supabase or local JSON files depending on the current page
+ * 
+ * @returns {Promise<void>} - resolves when content is loaded, rejects when there is an error
  */
 async function loadContent() {
     try {
@@ -155,7 +175,7 @@ async function loadContent() {
         
         console.log('Content loaded successfully:', content);
         
-        const path = window.location.pathname || window.location.href;
+        const path = window.location.pathname || window.location.href; // få path uten URL parametere
         const currentPage = path.split('/').pop().split('?')[0];
         
         switch(currentPage) {
@@ -182,22 +202,33 @@ async function loadContent() {
     }
 }
 
+
 // Populate common elements (header, footer)
+// This function populates the common elements of the page such as the announcement bar, navigation, footer and newsletter.
 function populateCommonElements(content) {
-    // Announcement bar
+    // får felles elementer
+    // Announcement Bar
     const announcementBar = document.querySelector('.announcement-bar');
+    // hvis announcement bar finnes og det er innhold for det
     if (announcementBar && content.announcement) {
+        // sette innhold
         announcementBar.textContent = content.announcement;
     }
 
     // Navigation
+    // få logo elementet 
     const logo = document.querySelector('.logo');
+    // hvis logo elementet finnes og det er innhold for det
     if (logo && content.nav) {
+        // sett text innholdet til logo
         logo.textContent = content.nav.logo;
     }
     
+    // få alle navigasjons lenkene
     const navLinks = document.querySelectorAll('.nav-menu li a');
+    // hvis det er nok navigasjons lenker og det er innhold for det
     if (navLinks.length >= 5 && content.nav) {
+        // set tekst innholdet for hver lenke
         navLinks[0].textContent = content.nav.home;
         navLinks[1].textContent = content.nav.menu;
         navLinks[2].textContent = content.nav.about;
@@ -205,19 +236,29 @@ function populateCommonElements(content) {
         navLinks[4].textContent = content.nav.contact;
     }
     
+    // få book table knappen
     const bookTableBtn = document.querySelector('.nav-actions a');
+    // hvis book table knappen finnes og det er innhold for det
     if (bookTableBtn && content.nav) {
+        // set tekst innholdet
         bookTableBtn.textContent = content.nav.bookTable;
     }
 
     // Footer
+    // få alle footer seksjonene
     const footerSections = document.querySelectorAll('.footer-section');
+    // hvis det er nok footer seksjoner og det er innhold for det
     if (footerSections.length >= 4 && content.footer) {
+        // loop gjennom hver footer seksjon og sett innholdet
         content.footer.sections.forEach((section, index) => {
+            // sjekk om footer seksjonen finnes
             if (footerSections[index]) {
+                // få tittelen til footer seksjonen
                 const title = footerSections[index].querySelector('h3');
+                // hvis tittelen finnes, sett tekst innholdet
                 if (title) title.textContent = section.title;
                 
+                // få alle lenkene i seksjonen
                 const links = footerSections[index].querySelectorAll('li');
                 section.links.forEach((link, linkIndex) => {
                     if (links[linkIndex]) {
@@ -234,9 +275,13 @@ function populateCommonElements(content) {
         });
 
         // Newsletter
+        // få newsletter elementet
         const newsletterTitle = document.querySelector('.newsletter h3');
+
         const newsletterDesc = document.querySelector('.newsletter p');
+// få newsletter input element
         const newsletterInput = document.querySelector('.newsletter input');
+// få newsletter knapp element
         const newsletterBtn = document.querySelector('.newsletter button');
         
         if (newsletterTitle) newsletterTitle.textContent = content.footer.newsletter.title;
@@ -246,47 +291,52 @@ function populateCommonElements(content) {
     }
 }
 
+
 // Populate home page (index.html)
 function populateHomePage(content) {
     populateCommonElements(content);
 
-    // Hero section
-    const heroTitle = document.querySelector('.hero h1');
-    const heroSubtitle = document.querySelector('.hero p');
-    const heroCta = document.querySelector('.hero .cta-button');
+// Hero sesjon
+    const heroTitle = document.querySelector('.hero h1'); // få hero tittel
+    const heroSubtitle = document.querySelector('.hero p'); // få hero undertittel
+    const heroCta = document.querySelector('.hero .cta-button'); // få hero call-to-action knapp
     
-    if (heroTitle && content.hero) heroTitle.textContent = content.hero.title;
-    if (heroSubtitle && content.hero) heroSubtitle.textContent = content.hero.subtitle;
-    if (heroCta && content.hero) heroCta.textContent = content.hero.cta;
+    if (heroTitle && content.hero) heroTitle.textContent = content.hero.title; // sett hero tittel
+    if (heroSubtitle && content.hero) heroSubtitle.textContent = content.hero.subtitle; // sett hero undertittel
+    if (heroCta && content.hero) heroCta.textContent = content.hero.cta; // sett hero call-to-action knapp
 
-    // Category cards
-    const categoryCards = document.querySelectorAll('.category-card');
-    if (content.categories) {
-        content.categories.forEach((cat, index) => {
-            if (categoryCards[index]) {
-                const title = categoryCards[index].querySelector('h3');
-                const desc = categoryCards[index].querySelector('p');
-                const link = categoryCards[index].querySelector('.category-link');
+    // Category cards og plasserer innhold 
+    const categoryCards = document.querySelectorAll('.category-card'); // få alle kategori kortene
+    if (content.categories) { // hvis det er innhold for kategorier
+         // loop gjennom hver kategori og sett innholdet
+        content.categories.forEach((cat, index) => { // for hver kategori
+            if (categoryCards[index]) { // sjekk om kategori kortet finnes
+                 // få tittel, beskrivelse og lenke elementene
+                const title = categoryCards[index].querySelector('h3'); // få tittel element
+                const desc = categoryCards[index].querySelector('p'); // få beskrivelse element
+                const link = categoryCards[index].querySelector('.category-link'); // få lenke element
                 
-                if (title) title.textContent = cat.title;
-                if (desc) desc.textContent = cat.description;
-                if (link) link.textContent = cat.link;
+                if (title) title.textContent = cat.title; // sett tittel tekst
+                if (desc) desc.textContent = cat.description; //    sett beskrivelse tekst
+                if (link) link.textContent = cat.link; //    sett lenke tekst
             }
         });
     }
 
-    // Menu section
-    const menuTitle = document.querySelector('.menu-section .section-title');
+    // hovedmeny seksjon
+    const menuTitle = document.querySelector('.menu-section .section-title'); // få meny tittel
     const menuSubtitle = document.querySelector('.menu-section .section-subtitle');
     
-    if (menuTitle && content.menu) menuTitle.textContent = content.menu.title;
-    if (menuSubtitle && content.menu) menuSubtitle.textContent = content.menu.subtitle;
+    if (menuTitle && content.menu) menuTitle.textContent = content.menu.title; // sett meny tittel
+    if (menuSubtitle && content.menu) menuSubtitle.textContent = content.menu.subtitle; // sett meny undertittel
 
-    // Menu categories
-    const menuCategories = document.querySelectorAll('.menu-category');
-    if (content.menu && content.menu.categories) {
-        const menuData = [content.menu.categories.coffee, content.menu.categories.bakery, content.menu.categories.lunch];
-        
+    // fyller meny kategorier og elementer
+    const menuCategories = document.querySelectorAll('.menu-category'); // få alle meny kategoriene
+    if (content.menu && content.menu.categories) { // hvis det er innhold for meny kategorier
+         // data for hver meny kategori
+        const menuData = [content.menu.categories.coffee, content.menu.categories.bakery, content.menu.categories.lunch]; // meny data for hver kategori
+         // loop gjennom hver meny kategori og sett innholdet
+        // for hver meny kategori
         menuCategories.forEach((category, index) => {
             if (menuData[index]) {
                 const categoryTitle = category.querySelector('h3');
@@ -306,7 +356,7 @@ function populateHomePage(content) {
         });
     }
 
-    // CTA section
+    // app seksjon
     const ctaTitle = document.querySelector('.app-section h2');
     const ctaDesc = document.querySelector('.app-section p');
     const ctaBtn = document.querySelector('.app-section .cta-button');
@@ -316,7 +366,24 @@ function populateHomePage(content) {
     if (ctaBtn && content.cta) ctaBtn.textContent = content.cta.button;
 }
 
-// Populate about page (om-oss.html)
+
+
+
+
+
+/**
+ * 
+ * Populate about page (om-oss.html)   
+ * dette er populate for alle sidene dette var skrevet med ai gjenom å ha intraktivted plassert. dette er kun for populat delene jeg har fått forklart den foroje og gjør ikke på alle 
+ * 
+ * 
+ */
+
+
+
+
+
+
 function populateAboutPage(content) {
     populateCommonElements(content);
 
@@ -590,8 +657,8 @@ function populateContactPage(content) {
 }
 
 // Load content when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadContent);
+if (document.readyState === 'loading') { // DOM not ready yet
+    document.addEventListener('DOMContentLoaded', loadContent); // vent for DOM ready
 } else {
     // DOM is already ready
     loadContent();

@@ -1,18 +1,27 @@
-// Determine which JSON file to load based on current page
+// Bestem hvilken JSON-fil som skal lastes basert på gjeldende side
+// Denne funksjonen returnerer banen til JSON-filen som inneholder innholdet for den gjeldende siden
 function getContentFile() {
-    const currentPage = window.location.pathname.split('/').pop();
-    
-    switch(currentPage) {
-      case 'om-oss.html':
-        return './assets/text/about.json';
-      case 'sted.html':
-        return './assets/text/location.json';
-      case 'kontakt.html':
-        return './assets/text/contact-page.json';
-      default:
-        return './assets/text/content.json';
-    }
-  }
+// Hent den gjeldende siden ved å dele URL-stien og ta det siste elementet
+const currentPage = window.location.pathname.split('/').pop();
+
+// Bytt basert på den gjeldende siden  
+switch(currentPage) {  
+  // Hvis den gjeldende siden er om-oss.html, returner banen til about.json  
+  case 'om-oss.html':  
+    return './assets/text/about.json';  
+  // Hvis den gjeldende siden er sted.html, returner banen til location.json  
+  case 'sted.html':  
+    return './assets/text/location.json';  
+  // Hvis den gjeldende siden er kontakt.html, returner banen til contact-page.json  
+  case 'kontakt.html':  
+    return './assets/text/contact-page.json';  
+  // Hvis den gjeldende siden er en annen side, returner banen til content.json  
+  default:  
+    return './assets/text/content.json';  
+}  
+
+
+}
   
   // Load content from JSON
   async function loadContent() {

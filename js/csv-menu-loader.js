@@ -187,3 +187,6 @@ class CSVMenuLoader {
 }
 
 export { CSVMenuLoader };
+
+
+// alt er skrevet med ai på denne filen med supabse sin AI
