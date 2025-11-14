@@ -166,18 +166,43 @@ body {
 
 .admin-header {
     background: #f7f7f7;
-    padding: 20px 40px;
+    padding: 15px 40px;
     box-shadow: 0 2px 5px rgba(5, 41, 2, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #064703;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-branding {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.admin-branding a {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.admin-branding img {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .admin-header h1 {
     color: #052902;
     font-size: 24px;
     letter-spacing: 1px;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .header-actions {

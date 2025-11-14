@@ -76,6 +76,8 @@ body {
     max-width: 200px;
     object-fit: contain;
     transition: all 0.3s ease;
+    display: block;
+    flex-shrink: 0;
 }
 
 .logo:hover .site-logo {
