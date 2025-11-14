@@ -29,7 +29,7 @@ body {
     box-shadow: 0 4px 12px rgba(5, 41, 2, 0.08);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000; /* ensure header/logo stays above all content */
     transition: all 0.3s ease;
 }
 
@@ -40,6 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: nowrap; /* prevent wrapping pushing logo under nav */
 }
 
 .logo {
@@ -50,8 +51,9 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     position: relative;
-    display: flex;
+    display: inline-flex; /* keep anchor sizing to content */
     align-items: center;
+    line-height: 1; /* avoid extra vertical baseline space */
 }
 
 .logo::after {
@@ -76,6 +78,7 @@ body {
     max-width: 200px;
     object-fit: contain;
     transition: all 0.3s ease;
+    display: block; /* avoid baseline gap */
 }
 
 .logo:hover .site-logo {
@@ -157,6 +160,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    z-index: 1; /* keep below sticky header */
 }
 
 .hero::before {
@@ -168,6 +172,7 @@ body {
     bottom: 0;
     background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 0; /* keep decorations under hero content */
 }
 
 .hero h1 {
@@ -628,6 +633,7 @@ body {
     padding: 100px 20px;
     position: relative;
     overflow: hidden;
+    z-index: 1; /* keep below sticky header */
 }
 
 .contact-hero::before, .about-hero::before, .location-hero::before {
@@ -639,6 +645,7 @@ body {
     bottom: 0;
     background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 0; /* keep decorations under hero content */
 }
 
 .contact-hero h1, .about-hero h1, .location-hero h1 {
@@ -1055,10 +1062,31 @@ body {
     box-shadow: 0 8px 25px rgba(5, 41, 2, 0.3);
 }
 
+/* Ensure all major content sections stack below the sticky header */
+.hero,
+.menu-hero,
+.about-hero,
+.location-hero,
+.contact-hero,
+.category-section,
+.menu-section,
+.app-section,
+.contact-section,
+.about-section,
+.location-section,
+.map-section {
+    position: relative;
+    z-index: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+    }
+
+    .nav-container {
+        gap: 12px; /* keep spacing tight on mobile */
     }
 
     .hero h1 {
