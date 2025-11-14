@@ -1,7 +1,8 @@
 {
   "announcement": "Cafen er i Oslo",
+  "logo": "assets/kaffe aroma logo.png",
   "nav": {
-    "logo": "Caffè",
+    "logo": "assets/kaffe aroma logo.png",
     "home": "Hjem",
     "menu": "Meny",
     "about": "Om Oss",

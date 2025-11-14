@@ -29,7 +29,7 @@ body {
     box-shadow: 0 4px 12px rgba(5, 41, 2, 0.08);
     position: sticky;
     top: 0;
-    z-index: 1000; /* ensure header/logo stays above all content */
+    z-index: 9999; /* Increased z-index to ensure header stays above all content */
     transition: all 0.3s ease;
 }
 
@@ -54,6 +54,7 @@ body {
     display: inline-flex; /* keep anchor sizing to content */
     align-items: center;
     line-height: 1; /* avoid extra vertical baseline space */
+    z-index: 10000; /* Ensure logo is above everything else */
 }
 
 .logo::after {
@@ -71,13 +72,17 @@ body {
     width: 100%;
 }
 
-/* Logo image styling */
+/* Logo image styling - Enhanced for visibility */
 .site-logo {
     height: 50px;
     width: auto;
     max-width: 200px;
     object-fit: contain;
     transition: all 0.3s ease;
+    display: block; /* Ensure proper display */
+    z-index: 10001; /* Highest z-index for the actual logo image */
+    position: relative;
+    background-color: transparent; /* Ensure no background interference */
 }
 
 .logo:hover .site-logo {
@@ -88,6 +93,8 @@ body {
     display: flex;
     list-style: none;
     gap: 35px;
+    z-index: 9998; /* Below logo but above other content */
+    position: relative;
 }
 
 .nav-menu a {
@@ -125,6 +132,8 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    z-index: 9998; /* Below logo but above other content */
+    position: relative;
 }
 
 .nav-actions a {
