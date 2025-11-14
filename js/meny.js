@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     try {
         // Show loading state
-        menuContainer.innerHTML = '<div style="text-align:center; padding:40px 0;">Laster meny...</div>';
+        menuContainer.innerHTML = '<div style="text-align:center; padding:40px 0;">Laster meny... pass på du er på et nett med åpen internett trafikk</div>';
         
         // Load menu data
         const menuItems = await loader.loadMenuData();
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Failed to load menu:', error);
         menuContainer.innerHTML = '';
         if (errorState) {
-            errorState.textContent = 'Kunne ikke laste meny. Vennligst prøv igjen senere.';
+            errorState.textContent = 'Kunne ikke laste meny. skjekk at du er på et nett med åpent nett trafikk';
             errorState.style.display = 'block';
         }
     }
