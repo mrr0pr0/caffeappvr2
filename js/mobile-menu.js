@@ -20,3 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// funsjonen for å lage meny kort til mobil denne er hentet fra et eldre prosjekt

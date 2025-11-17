@@ -6,10 +6,17 @@ class SupabaseMenuLoader {
         this.menuData = [];
     }
 
+    /**
+     * laster menydata fra Supabase-databasen.
+     * @returns {Promise<Array<Object>>} laster menydata som en liste over objekter.
+     * @throws {Error} hvis det oppstår en feil under lasting av data.
+     */
     async loadMenuData() {
         try {
             console.log('Loading menu data from Supabase...');
             
+            // laster menydata fra Supabase
+            // Sorterer etter kategori, sort_order og navn
             const { data, error } = await supabase
                 .from('menu_items')
                 .select('*')
@@ -19,14 +26,17 @@ class SupabaseMenuLoader {
                 .order('name');
 
             if (error) {
+                // Hvis det oppstår en feil, logg den og kast en ny feil.
                 console.error('Supabase error:', error);
                 throw new Error(`Database error: ${error.message}`);
             }
 
             console.log('Menu data loaded from Supabase:', data?.length || 0, 'items');
+            // returnerer menydata
             return data || [];
             
         } catch (error) {
+            // hvis det oppstår en feil, logg den og kast den videre.
             console.error('Error loading menu data:', error);
             throw error;
         }
@@ -42,6 +52,12 @@ class SupabaseMenuLoader {
         return map;
     }
 
+
+    /**
+     * lager et meny element kort.
+     * @param {Object} item - meny element data.
+     * @returns {HTMLElement} a meny element kort.
+     */
     createItemCard(item) {
         const card = document.createElement('div');
         card.className = 'menu-card';
@@ -51,21 +67,33 @@ class SupabaseMenuLoader {
         imageContainer.className = 'menu-card-image-container';
 
         if (item.image_url) {
+            // Use image URL if available
             const img = document.createElement('img');
             img.className = 'menu-card-image';
             img.alt = item.name || 'Menybilde';
             img.src = item.image_url;
             img.onerror = function() {
                 this.style.display = 'none';
+                // Use category-specific icons if image URL is not available
+                let icon = '🍽️';
+                if (item.category === 'Kaffe') icon = '☕';
+                else if (item.category === 'Bakst') icon = '🥐';
+                else if (item.category === 'Mat') icon = '🍽️';
+                else if (item.category === 'dessert') icon = '🍰';
+                else if (item.category === 'Frokost') icon = '🥚';
+                
+                imageContainer.innerHTML = `<div class="menu-card-placeholder">${icon}</div>`;
                 imageContainer.innerHTML = '<div class="menu-card-placeholder">📷</div>';
             };
             imageContainer.appendChild(img);
         } else {
-            // Use category-specific icons
+            // bruker ikke bilde, hvis ikke tilgjengelig
+            // bruk category-spesifikke ikoner
             let icon = '🍽️';
             if (item.category === 'Kaffe') icon = '☕';
             else if (item.category === 'Bakst') icon = '🥐';
             else if (item.category === 'Mat') icon = '🍽️';
+            else if (item.category === 'dessert') icon = '🍰';
             else if (item.category === 'desser') icon = '🍰';
             else if (item.category === 'Frokost') icon = '🥚';
             
@@ -104,6 +132,7 @@ class SupabaseMenuLoader {
         return card;
     }
 
+
     renderMenu(items, container) {
         if (!container) return;
         container.innerHTML = '';
@@ -129,7 +158,7 @@ class SupabaseMenuLoader {
                 const itemsWrap = document.createElement('div');
                 itemsWrap.className = 'menu-items-grid';
 
-                // Items are already sorted by sort_order and name from the query
+                // Legg til elementer i kategorien
                 items.forEach(item => {
                     itemsWrap.appendChild(this.createItemCard(item));
                 });
