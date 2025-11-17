@@ -35,7 +35,7 @@
 
   
   "menu": {
-    "title": "mest populære produkter",
+    "title": "Mest populære produkter",
     "subtitle": "her kan du finne våre mest populære produkter",
     "categories": {
       "coffee": {
@@ -48,7 +48,7 @@
         ]
       },
       "bakery": {
-        "title": "bakst/deserter",
+        "title": "Bakst/Desserter",
         "items": [
           { "name": "Sjokoladebolle Kokos", "price": "39.90kr" },
           { "name": "Focaccia Salami & Brie", "price": "89.90kr" },
@@ -57,7 +57,7 @@
         ]
       },
       "lunch": {
-        "title": "lunsj",
+        "title": "Lunsj",
         "items": [
           { "name": "Toast Egg & Bacon", "price": "69.90kr" },
           { "name": "Salat Bowl Cæsar Kylling", "price": "79.90kr" },
