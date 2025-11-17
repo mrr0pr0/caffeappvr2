@@ -73,42 +73,42 @@
   "footer": {
     "sections": [
       {
-        "title": "Footer-seksjon 1: Merkevare/navigasjon",
+        "title": "Caffè",
         "links": [
-          { "text": "Lenke til om oss", "url": "URL" },
-          { "text": "Lenke til stedsinformasjon", "url": "URL" },
-          { "text": "Lenke til kontaktside", "url": "URL" }
+          { "text": "Om Oss", "url": "om-oss.html" },
+          { "text": "Vårt Sted", "url": "sted.html" },
+          { "text": "Kontakt", "url": "kontakt.html" }
         ]
       },
       {
-        "title": "Footer-seksjon 2: Menylenker",
+        "title": "Meny",
         "links": [
-          { "text": "Lenke til kaffemeny", "url": "URL" },
-          { "text": "Lenke til bakstmeny", "url": "URL" },
-          { "text": "Lenke til lunsjmeny", "url": "URL" }
+          { "text": "Kaffe", "url": "index.html#menu" },
+          { "text": "Bakst", "url": "index.html#menu" },
+          { "text": "Lunsj", "url": "index.html#menu" }
         ]
       },
       {
-        "title": "Footer-seksjon 3: Kontaktinformasjon",
+        "title": "Kontakt",
         "links": [
-          { "text": "Telefonnummer", "url": "Telefon-URL" },
-          { "text": "E-postadresse", "url": "E-post-URL" },
-          { "text": "Gateadresse og postnummer", "url": "URL" }
+          { "text": "+47 123 45 678", "url": "tel:+4712345678" },
+          { "text": "post@caffe.no", "url": "mailto:post@caffe.no" },
+          { "text": "Torggata 11, 0181 Oslo", "url": "" }
         ]
       },
       {
-        "title": "Footer-seksjon 4: Åpningstider",
+        "title": "Åpningstider",
         "links": [
-          { "text": "Ukedager og tidsrom", "url": "URL" },
-          { "text": "Helgedager og tidsrom", "url": "URL" }
+          { "text": "Man-Fre: 07:00-20:00", "url": "" },
+          { "text": "Lør-Søn: 08:00-18:00", "url": "" }
         ]
       }
     ],
     "newsletter": {
-      "title": "Overskrift for nyhetsbrevpåmelding",
-      "description": "Beskrivelse av nyhetsbrevfordeler",
-      "placeholder": "Placeholder-tekst for e-postinputfelt",
-      "button": "Påmeldingsknapp"
+      "title": "Hold deg oppdatert",
+      "description": "Beskrivelse av nyhetsbrevet",
+      "placeholder": "Din e-postadresse",
+      "button": "MELD DEG PÅ"
     }
   }
 }

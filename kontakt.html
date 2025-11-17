@@ -139,7 +139,7 @@
         <div class="map-placeholder">
             <p>Vi holder til i hjertet av Oslo.</p>
             <p>midt i karl johan</p>
-            <button class="map-link">Vis på kart</button>
+            <a href="https://maps.google.com/?q=Karl+Johans+gate,+Oslo" target="_blank" class="map-link">Vis på kart</a>
         </div>
     </section>
 
@@ -148,42 +148,51 @@
         <div class="footer-content">
             <!-- Navigasjonsseksjon i footer -->
             <div class="footer-section">
-                <h3>Navigasjon</h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="om-oss.html">Om oss</a></li>
-                    <li><a href="sted.html">Sted</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="om-oss.html"></a></li> <!-- Om oss lenke -->
+                    <li><a href="sted.html"></a></li> <!-- Sted lenke -->
+                    <li><a href="kontakt.html"></a></li> <!-- Kontakt lenke -->
                 </ul>
             </div>
-            <!-- Meny-seksjon i footer -->
+            <!-- Sosiale medier seksjon -->
             <div class="footer-section">
-                <h3>Meny</h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="index.html#menu">Kaffe</a></li>
-                    <li><a href="index.html#menu">Bakst</a></li>
-                    <li><a href="index.html#menu">Lunsj</a></li>
+                    <li><a href="https://www.snapchat.com/add/caffeno"></a></li> <!-- Snapchat lenke -->
+                    <li><a href="https://www.instagram.com/caffeno/"></a></li> <!-- Instagram lenke -->
+                    <li><a href="https://www.facebook.com/caffeno"></a></li> <!-- Facebook lenke -->
+                    <li><a href="https://www.tiktok.com/@caffeno"></a></li> <!-- TikTok lenke -->
                 </ul>
             </div>
-            <!-- Kontakt-seksjon i footer -->
+            <!-- Kontaktinformasjon seksjon -->
             <div class="footer-section">
-                <h3>Kontakt</h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li><a href="tel:+4712345678">+47 12 34 56 78</a></li> <!-- Telefonnummer -->
-                    <li>e post status</li> <!-- E-post status -->
-                    <li>Torggata 11, 0181 Oslo</li> <!-- Adresse -->
+                    <li><a href="tel:+4712345678"></a></li> <!-- Telefonnummer -->
+                    <li><a href="/cdn-cgi/l/email-protection#70001f03043013111616155e1e1f"><span class="__cf_email__" data-cfemail="14647b67605477757272713a7a7b">[email&#160;protected]</span></a></li> <!-- E-post adresse -->
+                    <li><a href="#"></a></li> <!-- Adresse informasjon -->
                 </ul>
             </div>
-            <!-- Åpningstider seksjon i footer -->
+            <!-- Åpningstider seksjon -->
             <div class="footer-section">
-                <h3>Åpningstider</h3>
+                <h3></h3> <!-- Seksjonstittel lastes dynamisk -->
                 <ul>
-                    <li>Man–Fre: 08–18</li>
-                    <li>Lør–Søn: 10–17</li>
+                    <li></li> <!-- Åpningstider lastes dynamisk -->
+                    <li></li> <!-- Åpningstider lastes dynamisk -->
                 </ul>
             </div>
         </div>
         
-        <!-- Nyhetsbrev fjernet siden e-post funksjon er deaktivert -->
+        <!-- Nyhetsbrev-seksjon -->
+        <div class="newsletter">
+            <h3></h3> <!-- Nyhetsbrev tittel lastes dynamisk -->
+            <p></p> <!-- Nyhetsbrev beskrivelse lastes dynamisk -->
+            <form class="newsletter-form">
+                <input type="email" placeholder="" required> <!-- E-post input felt -->
+                <button type="submit"></button> <!-- Send knapp -->
+            </form>
+        </div>
     </footer>
 
     <!-- Hovedscript som laster innhold dynamisk fra Supabase -->
