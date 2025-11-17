@@ -35,8 +35,25 @@
                 <!-- Skjult admin-lenke -->
                 <a href="admin.html" class="admin-link" style="margin-left: 10px; font-size: 12px; opacity: 0.7;">Admin</a>
             </div>
+            <!-- Hamburger menu for mobile -->
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay">
+        <nav>
+            <a href="index.html">Hjem</a>
+            <a href="meny.html">Meny</a>
+            <a href="om-oss.html">Om oss</a>
+            <a href="sted.html">Sted</a>
+            <a href="kontakt.html" class="active">Kontakt</a>
+        </nav>
+    </div>
 
     <!-- Hero-seksjon for kontakt-siden -->
     <section class="contact-hero">
@@ -170,6 +187,7 @@
     </footer>
 
     <!-- Hovedscript som laster innhold dynamisk fra Supabase -->
+    <script src="./js/mobile-menu.js"></script>
     <script type="module" src="./js/content-loader-supabase.js"></script>
 </body>
 </html>
