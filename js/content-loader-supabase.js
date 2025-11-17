@@ -216,12 +216,10 @@ function populateCommonElements(content) {
     }
 
     // Navigation
-    // få logo elementet 
-    const logo = document.querySelector('.logo');
-    // hvis logo elementet finnes og det er innhold for det
-    if (logo && content.nav) {
-        // sett text innholdet til logo
-        logo.textContent = content.nav.logo;
+    // sett nettstedstittel ved siden av logoen, uten å fjerne bilde
+    const siteTitleEl = document.querySelector('.site-title');
+    if (siteTitleEl && content.nav) {
+        siteTitleEl.textContent = content.nav.siteTitle || '';
     }
     
     // få alle navigasjons lenkene

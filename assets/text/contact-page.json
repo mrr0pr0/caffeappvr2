@@ -1,13 +1,14 @@
 {
   "announcement": "Cafen er i Oslo",
   "nav": {
-    "logo": "Kaféens navn/logo",
-    "home": "hjem",
-    "menu": "meny",
-    "about": "oss-side",
-    "location": "stedsinformasjon",
-    "contact": "kontaktinformasjon",
-    "bookTable": "bordbestilling"
+    "logo": "",
+    "siteTitle": "Kaffe Aroma",
+    "home": "Hjem",
+    "menu": "Meny",
+    "about": "Oss-side",
+    "location": "Stedsinformasjon",
+    "contact": "Kontaktinformasjon",
+    "bookTable": "Bordbestilling"
   },
   "hero": {
     "title": "kontakt oss her",
