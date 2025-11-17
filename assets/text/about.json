@@ -27,22 +27,22 @@
       {
         "icon": "☕",
         "title": "Kvalitet",
-        "description": "description"
+        "description": "Vi setter kvalitet først i alt vi gjør – fra råvarene vi velger til servicen vi leverer. Hver kopp, hver rett og hver opplevelse skal holde et nivå vi er stolte av."
       },
       {
         "icon": "🌱",
         "title": "Bærekraft",
-        "description": "description"
+        "description": "Vi tar ansvar for miljøet ved å velge bærekraftige råvarer, redusere matsvinn og bruke løsninger som gjør en forskjell – både i dag og for framtiden."
       },
       {
-        "icon": "emoji",
-        "title": "title",
-        "description": "description"
+        "icon": "🤝",
+        "title": "Fellesskap",
+        "description": "Kaféen vår er et møtested. Vi skaper rom for gode øyeblikk, samtaler og tilhørighet – et sted hvor alle skal føle seg velkommen."
       },
       {
-        "icon": "emoji",
-        "title": "title",
-        "description": "description"
+        "icon": "✨",
+        "title": "Glede",
+        "description": "Vi tror på små gleder i hverdagen. En varm kopp kaffe, et smil over disken og et øyeblikk av ro – det er dette vi ønsker å gi hver eneste gjest."
 
       }
     ]
