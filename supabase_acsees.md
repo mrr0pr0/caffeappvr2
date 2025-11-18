@@ -1,3 +1,3 @@
 subasemenyen ligger på
 
-supabase d
+supabase dash
