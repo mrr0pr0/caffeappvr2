@@ -141,7 +141,7 @@ async function handleLogout() {
  * @function showDashboard
  */
 function showDashboard() {
-    // skjul login skjerm og vis admin dashboard
+    // skjul login skjerm og vis admin dashboardet
     loginScreen.style.display = 'none';
     adminDashboard.style.display = 'block'; 
     
