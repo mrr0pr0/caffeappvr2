@@ -18,17 +18,17 @@
   "categories": [
     {
       "title": "Kaffe Meny",
-      "description": "her finner du vår caffe meny",
+      "description": "Her finner du vår caffe meny",
       "link": "trykk for å see meny"
     },
     {
       "title": "Mat Meny",
-      "description": "her finner du vår mat meny ",
+      "description": "Her finner du vår mat meny ",
       "link": "trykk for å see meny"
     },
     {
       "title": "Om Oss",
-      "description": "her kan du lese om oss",
+      "description": "Her kan du lese om oss",
       "link": "trykk for å om oss"
     }
   ],
@@ -36,7 +36,7 @@
   
   "menu": {
     "title": "Mest populære produkter",
-    "subtitle": "her kan du finne våre mest populære produkter",
+    "subtitle": "Her kan du finne våre mest populære produkter",
     "categories": {
       "coffee": {
         "title": "Frokost",
