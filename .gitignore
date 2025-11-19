@@ -1,2 +1,26 @@
 node_modules/
 .env
+
+# Replit
+.upm
+.config
+.cache
+.breakpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Editor directories
+.vscode/
+.idea/
