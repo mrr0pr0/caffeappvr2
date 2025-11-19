@@ -11,6 +11,11 @@ This is a web-based admin system for managing cafe website content through Supab
   - Configured workflow to serve site on port 5000 with 0.0.0.0 binding
   - Updated .gitignore for Python and Replit environment
   - Created project documentation
+- **2025-11-19**: Hero section visual enhancement
+  - Added background image to front page hero section
+  - Implemented coffee shop interior photo with gradient overlay
+  - Maintained text readability with 0.75 alpha dark green tint
+  - Added stock image from attached_assets/stock_images/
 
 ## Project Architecture
 
